@@ -1,0 +1,35 @@
+/* transparency */
+html,
+body,
+#root,
+#app,
+#dss-web,
+main,
+header,
+nav,
+footer,
+aside,
+[data-testid="background"],
+[class*="page-background"],
+[class*="PageBackground"],
+[class*="app-container"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* glass chrome $ Soft glass for disney+ chrome overlays */
+header,
+nav,
+[role="dialog"],
+[class*="modal"],
+[class*="Modal"] {
+  backdrop-filter: blur(20px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
+  background-color: rgb(0 0 0 / 28%) !important;
+}

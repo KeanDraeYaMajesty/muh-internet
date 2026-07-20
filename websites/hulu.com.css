@@ -1,0 +1,44 @@
+/* transparency */
+html,
+body,
+#app,
+#root,
+#__next,
+.Application,
+.Application__page,
+.Page,
+.Nav,
+.Nav__container,
+.Header,
+.Footer,
+.cu-modal,
+.Modal,
+.Sidebar,
+.Browse,
+.Hub,
+.Collection,
+.Collection__container,
+main,
+[class*="Background"],
+[class*="PageBackground"],
+[class*="AppBackground"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* glass chrome $ Soft glass for nav / overlays without covering video */
+.Nav,
+.Header,
+.Modal__content,
+[class*="Dialog"],
+[class*="Popover"] {
+  backdrop-filter: blur(20px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
+  background-color: rgb(0 0 0 / 28%) !important;
+}

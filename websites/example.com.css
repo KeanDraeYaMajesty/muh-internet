@@ -33,7 +33,13 @@ section, .l-root,
 body.dark_mode, body.light_mode,
 text-div > textarea, #starlight__sidebar, .sidebar-pane, .page--article, #xf-guide,
 
-[data-color-theme] body, #__next > div, .hero-right, #middle, .HeaderLinks_header__Ia2QY, #page-content, section[data-role] {
+[data-color-theme] body, #__next > div, .hero-right, #middle, .HeaderLinks_header__Ia2QY, #page-content, section[data-role],
+/* muh catch-all shells for force styling on unthemed sites */
+#application, #Application, .application, .page-wrapper, .pageWrapper,
+.layout, .Layout, .shell, .Shell, .container-fluid,
+[class*="PageBackground"], [class*="page-background"],
+[class*="AppBackground"], [class*="app-background"],
+[class*="MainContent"], [data-testid="page"], [data-testid="background"] {
   background-color: transparent !important;
   /* @Testing inline comments */
   background: none !important;

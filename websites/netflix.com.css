@@ -1,17 +1,25 @@
 /* transparency */
 body,
-html {
-  background: transparent !important;
-}
-.profiles-gate-container {
-  background: transparent !important;
-}
+html,
+#appMountPoint,
+.profiles-gate-container,
+.mainView,
+.pinning-header,
+.header-container,
+.watch-video,
+.watch-video--player-view,
 .default-ltr-yhcdbf-cache-1rt8xw3,
 .nf-modal .nf-modal-background,
 .player-loading,
 .player-loading .gradient,
 .nf-screen-wrapper {
   background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
 }
 
 /* transparent billboard fade $ makes the featured show/game fade into the background. */

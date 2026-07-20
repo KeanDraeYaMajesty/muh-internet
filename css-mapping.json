@@ -3,5 +3,12 @@
   "example.com.css": ["alternativeto.net", "kbin.earth", "mp.weixin.qq.com", "-cifraclub.com.br", "support.atlassian.com", "wearechecking.online"],
   "pling.com.css": ["store.kde.org", "gnome-look.org", "appimagehub.com", "linux-apps.com"],
   "gitlab.com.css": ["gitlab.freedesktop.org"],
-  "+instructure.com.css": ["classroom.ucscout.org"]
+  "+instructure.com.css": ["classroom.ucscout.org"],
+  "max.com.css": ["play.hbomax.com", "www.max.com", "hbomax.com"],
+  "primevideo.com.css": ["www.primevideo.com", "amazon.com/gp/video"],
+  "disneyplus.com.css": ["www.disneyplus.com"],
+  "hulu.com.css": ["www.hulu.com"],
+  "peacocktv.com.css": ["www.peacocktv.com"],
+  "paramountplus.com.css": ["www.paramountplus.com"],
+  "play.max.com.css": ["www.play.max.com"]
 }
