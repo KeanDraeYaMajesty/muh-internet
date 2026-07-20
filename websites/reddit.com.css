@@ -80,6 +80,57 @@ shreddit-comment {
   }
 }
 
+/* reddit-muh glass profile menu $ Transparent glass user menu / faceplate dropdown / user drawer */
+faceplate-dropdown-menu,
+faceplate-dropdown-menu [role="menu"],
+faceplate-dropdown-menu menu,
+#expand-user-drawer-button + *,
+#user-drawer-content,
+#user-drawer,
+#profile-actions-menu,
+shreddit-profile-actions,
+shreddit-user-drawer,
+[id*="user-drawer"],
+[data-testid="user-drawer"],
+reddit-header-user-drawer {
+  background: transparent !important;
+  background-color: transparent !important;
+  --color-neutral-background: transparent !important;
+  --color-neutral-background-strong: transparent !important;
+  --color-neutral-background-hover: rgb(255 255 255 / 10%) !important;
+  --color-neutral-background-selected: rgb(255 255 255 / 12%) !important;
+  --color-secondary-background: transparent !important;
+  border-color: rgb(255 255 255 / 14%) !important;
+  box-shadow: none !important;
+}
+
+faceplate-dropdown-menu,
+#user-drawer-content,
+#user-drawer,
+#profile-actions-menu,
+shreddit-profile-actions,
+[id*="user-drawer"] {
+  backdrop-filter: blur(24px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.15) !important;
+  background-color: light-dark(rgb(255 255 255 / 42%), rgb(0 0 0 / 28%)) !important;
+  border-radius: 1em !important;
+}
+
+faceplate-dropdown-menu > *,
+#user-drawer-content > *,
+#user-drawer > *,
+#profile-actions-menu > *,
+shreddit-profile-actions > *,
+faceplate-dropdown-menu button,
+faceplate-dropdown-menu a,
+#user-drawer-content button,
+#user-drawer-content a,
+#profile-actions-menu button,
+#profile-actions-menu a {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 /* glass effect */
 shreddit-post {
   padding: 1em !important;
