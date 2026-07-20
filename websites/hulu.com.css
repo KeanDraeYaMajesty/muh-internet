@@ -35,14 +35,14 @@ main,
   --darkreader-background-ffffff: transparent !important;
 }
 
-/* glass chrome $ Soft glass for nav / overlays; do not restyle video */
+/* clear chrome $ Low-alpha nav / overlays; do not restyle video */
 .Nav,
 .Header,
 .Modal__content,
 [class*="Dialog"],
 [class*="Popover"],
 [role="dialog"] {
-  backdrop-filter: blur(20px) saturate(1.1) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
-  background-color: rgb(0 0 0 / 28%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-color: rgb(0 0 0 / 10%) !important;
 }
