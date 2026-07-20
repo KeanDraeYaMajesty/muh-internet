@@ -1,44 +1,44 @@
 # muh-internet
 
-**Your own flavor** of transparent website CSS for [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/) on Zen Browser.
+Independent Zen Internet styles flavor for Zen Browser — glass transparency across the web, including DRM streamer *chrome* and a catch-all for everything else.
 
-This repo is an independent fork of the community styles catalog — maintained separately as **muh-internet**, not as a contribution track back to the upstream project.
+## Point Zen Internet at this flavor
 
-## Point Zen Internet here
-
-In the Zen Internet extension popup:
-
-1. Open settings / advanced styles repository URL
-2. Set it to one of:
+1. Open the **Zen Internet** extension popup  
+2. Set the styles repository URL to:
 
 ```text
 https://raw.githubusercontent.com/KeanDraeYaMajesty/muh-internet/main/styles.json
 ```
 
-or (after GitHub Pages is enabled):
+3. Click **Refetch latest styles**  
+4. Enable **Force styling** (applies `example.com.css` to sites without a dedicated sheet)  
+5. Keep **Transparency** on
 
-```text
-https://keandraeyamajesty.github.io/muh-internet/styles.json
+That’s how “every other site” gets glass: dedicated sheets when we have them, force styling everywhere else.
+
+## DRM / streaming apps
+
+Dedicated chrome themes for:
+
+- Netflix, Hulu, Max (`max.com` + `play.max.com`), Disney+, Peacock, Paramount+, Prime Video  
+- Crunchyroll, Tubi, Discovery+  
+- Plus existing catalog sheets (YouTube, Twitch, Plex, Spotify, …)
+
+**Important:** CSS can transparent the site UI. Encrypted video frames stay black/blocked — that’s browser DRM (EME), not the theme. Zenslop-style mirrors also can’t capture those pixels.
+
+## Flavor extras (YouTube)
+
+- Glass playlist/queue, notifications, account menu, search bar  
+- Comments gutter so related content doesn’t clip under the panel  
+
+## Develop
+
+```bash
+npm install
+npm run update   # rebuilds styles.json from websites/*.css
 ```
-
-3. Click **Refetch latest styles**
-
-Enable **Force styling** (uses `example.com.css`) if you want glass transparency on sites that don’t have a dedicated stylesheet yet.
-
-## Flavor highlights
-
-- YouTube glass queue, notifications, account menu, and search bar
-- Comments gutter so related content doesn’t get clipped
-- DRM streamer chrome transparency (Netflix, Hulu, Max, Disney+, Peacock, Paramount+, Prime Video) — page UI only; protected video pixels stay DRM-black by design
-- Broader catch-all force theme via `example.com.css`
-
-## Contributing to *this* flavor
-
-1. Add or edit `websites/[domain].css`
-2. Use feature comments (`/* prefix-feature $ description */`) with `!important` on properties
-3. Run `npm install && npm run update` to rebuild `styles.json`
-4. Commit and push to **this** repo only
 
 ## Credits
 
-Originally derived from [sameerasw/my-internet](https://github.com/sameerasw/my-internet) (MIT). This tree is intentionally maintained as a separate flavor.
+Derived from [sameerasw/my-internet](https://github.com/sameerasw/my-internet) (MIT). Maintained here as a separate flavor — not an upstream contribution track.

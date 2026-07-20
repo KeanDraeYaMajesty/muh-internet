@@ -1,4 +1,4 @@
-/* transparency */
+/* transparency $ Peacock chrome transparency */
 html,
 body,
 #root,
@@ -10,9 +10,11 @@ footer,
 aside,
 [class*="Page"],
 [class*="Background"],
-[class*="Layout"] {
+[class*="Layout"],
+[class*="AppShell"] {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
 }
 

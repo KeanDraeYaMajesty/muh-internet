@@ -1,19 +1,17 @@
-/* transparency $ Prime Video chrome transparency */
+/* transparency $ Discovery+ chrome transparency */
 html,
 body,
 #root,
-#a-page,
-#dv-web-player,
+#app,
 main,
 header,
 nav,
 footer,
 aside,
-[class*="av-bg"],
-[class*="page-background"],
 [class*="Background"],
-[class*="DVWebPlayer"],
-.av-bg-image {
+[class*="Page"],
+[class*="Layout"],
+[class*="AppShell"] {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
@@ -29,7 +27,6 @@ aside,
 header,
 nav,
 [role="dialog"],
-[class*="modal"],
 [class*="Modal"] {
   backdrop-filter: blur(20px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;

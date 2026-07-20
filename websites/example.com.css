@@ -1,64 +1,97 @@
-/* transparency */
-/* @this is an example comment which should get skipped fromt he styles generation. Hope it works... :3 */
+/* transparency $ Full-page glass chrome for unthemed sites (Zen Internet force styling) */
 html,
 body,
+:root,
+#root,
+#__next,
+#app,
+#App,
+.app,
+.App,
+.app-root,
+.AppContainer,
+#application,
+#Application,
+.application,
+main,
+Main,
+#main,
+#Main,
+#content,
+#Content,
+#page,
+#Page,
+.page,
+.Page,
+.page-wrapper,
+.pageWrapper,
+.layout,
+.Layout,
+.shell,
+.Shell,
+.container,
+.Container,
+.container-fluid,
+.wrapper,
+.Wrapper,
+section,
+article,
+aside,
 nav,
+navbar,
 #nav,
-.nav, .sticky-category-bar-container,
-navbar, body > .root-l-content, .p-archiveBody__container,
-.navbar, .page_wrapper.without-image,
-#navbar, header > .global-head-cont,
-header, .toc-sidebar,
-#header, #temp_banner, .ranavnode,
-.header, header::before, body > article,
-app, #root > div > div > .w-full,
-#app, footer, .sc-tvx700-7.egPRoP,
-.sidebar-wrap, .p-sectionLinks,
-section, .main, main::before,
-#__next, .sidebar-wrapper, .sidebar-footer-wrapper, .sidebar-footer-container::before,
-#root, .min-h-screen.bg-white,
-.app, .AppContainer,
-.app-root, #wrapper, /* @Testing inline comments in selectors */
-body[data-theme="dark"], body[data-theme="light"],
-#pass-sidebar, .side-bar,
-#main, .sidebar, .global-content__content,
-main, .header-top,  /* any comment */
-#content, #cu-identity,
-section, .l-root,
-#__next, .landing-hero,
-#navigation-wrapper,
-#global-navbar, .layout__content-wrapper,
-.head.notfixed, .main-container,
-#app > div, .btm-nav > a, .oc-content--main,
-body.dark_mode, body.light_mode,
-text-div > textarea, #starlight__sidebar, .sidebar-pane, .page--article, #xf-guide,
-
-[data-color-theme] body, #__next > div, .hero-right, #middle, .HeaderLinks_header__Ia2QY, #page-content, section[data-role],
-/* muh catch-all shells for force styling on unthemed sites */
-#application, #Application, .application, .page-wrapper, .pageWrapper,
-.layout, .Layout, .shell, .Shell, .container-fluid,
-[class*="PageBackground"], [class*="page-background"],
-[class*="AppBackground"], [class*="app-background"],
-[class*="MainContent"], [data-testid="page"], [data-testid="background"] {
+#Nav,
+.nav,
+.Nav,
+.navbar,
+.Navbar,
+header,
+#header,
+#Header,
+.header,
+.Header,
+footer,
+#footer,
+#Footer,
+.footer,
+.Footer,
+.sidebar,
+.Sidebar,
+#sidebar,
+.side-bar,
+.toc-sidebar,
+[class*="PageBackground"],
+[class*="page-background"],
+[class*="pageBackground"],
+[class*="AppBackground"],
+[class*="app-background"],
+[class*="appBackground"],
+[class*="MainBackground"],
+[class*="main-background"],
+[class*="BackgroundContainer"],
+[class*="background-container"],
+[class*="LayoutBackground"],
+[data-testid="page"],
+[data-testid="background"],
+[data-testid="app"],
+[data-testid="layout"],
+.min-h-screen,
+.min-h-screen.bg-white,
+body[data-theme="dark"],
+body[data-theme="light"],
+body.dark_mode,
+body.light_mode,
+[data-color-theme] body {
   background-color: transparent !important;
-  /* @Testing inline comments */
   background: none !important;
-  border: none !important; /* any comment */
+  background-image: none !important;
   box-shadow: none !important;
-  transition:
-    background-color 0.5s ease-in-out,
-    background 0.5s ease-in-out,
-    border 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out !important;
-  /* any comment */
-  /* any comment */
 }
 
-/* @ this comment will also get skipped */
-/* @ this too */
-/* darkreader $ This is a example description */
+/* darkreader $ Clear Dark Reader opaque fills when force styling */
 :root {
   --darkreader-background-ffffff: transparent !important;
+  --darkreader-background-000000: transparent !important;
 }
 
 @layer {
@@ -70,11 +103,29 @@ text-div > textarea, #starlight__sidebar, .sidebar-pane, .page--article, #xf-gui
   }
 }
 
+/* muh glass overlays $ Soft glass for dialogs/menus without painting the whole page solid */
+[role="dialog"],
+[role="menu"],
+[role="listbox"],
+.modal,
+.Modal,
+.dialog,
+.Dialog,
+.popover,
+.Popover,
+.dropdown,
+.Dropdown,
+.menu-panel,
+.MenuPanel {
+  backdrop-filter: blur(20px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
+  background-color: rgb(0 0 0 / 28%) !important;
+}
+
 /* no footer */
 footer,
 #Footer,
 .Footer,
-mfe-footer-pharos-footer,
 .footer,
 #footer {
   display: none !important;

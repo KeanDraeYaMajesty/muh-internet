@@ -961,6 +961,11 @@
       "no footer": "footer {\n  display: none !important;\n}",
       "hidden": "#indexContent, .socialButtonsWidget, #contentBody p, #infoBar, #topLinks > span:nth-child(1), #feedbackTab {\n  display: none !important;\n}"
     },
+    "crunchyroll.com.css": {
+      "transparency $ Crunchyroll chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"erc-\"], [class*=\"background\"], [class*=\"Background\"], [class*=\"Layout\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
+      "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"popover\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+    },
     "cs.rin.ru.css": {
       "transparency": "html, body, nav, #nav, .nav, navbar, .navbar, #navbar, header, #header, .header, app, #app, .app, .app-root, #pass-sidebar, #main, main, #content, section, #__next, table, td, tr, th, #navigation-wrapper, #global-navbar, .head.notfixed, body[data-theme=\"dark\"], body[data-theme=\"light\"], body.dark_mode, body.light_mode {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
@@ -1096,15 +1101,20 @@
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "no footer": "footer, mfe-footer-pharos-footer, .footer, #footer {\n  display: none !important;\n}"
     },
+    "discoveryplus.com.css": {
+      "transparency $ Discovery+ chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"Background\"], [class*=\"Page\"], [class*=\"Layout\"], [class*=\"AppShell\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
+      "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+    },
     "discussions.apple.com.css": {
       "transparency": "html, body, nav, #nav, .nav, navbar, .navbar, #navbar, header, #header, .header, header::before, app, #app, footer, .sidebar-wrap, section, .main, #__next, .sidebar-wrapper, .sidebar-footer-wrapper, .sidebar-footer-container::before, #root, .min-h-screen.bg-white, .app, .AppContainer, .app-root, #wrapper, body[data-theme=\"dark\"], body[data-theme=\"light\"], #pass-sidebar, .side-bar, #main, .sidebar, .global-content__content, main, .header-top, #content, #cu-identity, section, .l-root, #__next, .landing-hero, #navigation-wrapper, #global-navbar, .layout__content-wrapper, .head.notfixed, .main-container, #app > div, .btm-nav > a, .oc-content--main, body.dark_mode, body.light_mode, text-div > textarea {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}\n.localnav-background {\n  border-radius: 0 0 1em 1em !important;\n}\n.hero-banner {\n  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%) !important;\n  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%) !important;\n  -webkit-mask-repeat: no-repeat !important;\n  mask-repeat: no-repeat !important;\n  -webkit-mask-size: cover !important;\n  mask-size: cover !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "no footer": "footer, mfe-footer-pharos-footer, .footer, #footer {\n  display: none !important;\n}"
     },
     "disneyplus.com.css": {
-      "transparency": "html, body, #root, #app, #dss-web, main, header, nav, footer, aside, [data-testid=\"background\"], [class*=\"page-background\"], [class*=\"PageBackground\"], [class*=\"app-container\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Disney+ chrome transparency": "html, body, #root, #app, #dss-web, main, header, nav, footer, aside, [data-testid=\"background\"], [class*=\"page-background\"], [class*=\"PageBackground\"], [class*=\"app-container\"], [class*=\"Background\"], [class*=\"Layout\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
-      "glass chrome $ Soft glass for disney+ chrome overlays": "header, nav, [role=\"dialog\"], [class*=\"modal\"], [class*=\"Modal\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"modal\"], [class*=\"Modal\"], [class*=\"Overlay\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
     "displate.com.css": {
       "transparency": "html, body, nav, #nav, .nav, navbar, .navbar, #navbar, #header, .header, app, #app, .app, .app-root, #pass-sidebar, #main, main, [data-testid=\"brand-of-the-week--feed\"], #content, section, #__next, #navigation-wrapper, #global-navbar, .head.notfixed, #sticky-bar, body[data-theme=\"dark\"], body[data-theme=\"light\"], body.dark_mode, body.light_mode {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}\nheader {\n  border-radius: 1em !important;\n}",
@@ -1280,9 +1290,10 @@
       "no footer": "footer {\n  display: none !important;\n}"
     },
     "example.com.css": {
-      "transparency": "html, body, nav, #nav, .nav, .sticky-category-bar-container, navbar, body > .root-l-content, .p-archiveBody__container, .navbar, .page_wrapper.without-image, #navbar, header > .global-head-cont, header, .toc-sidebar, #header, #temp_banner, .ranavnode, .header, header::before, body > article, app, #root > div > div > .w-full, #app, footer, .sc-tvx700-7.egPRoP, .sidebar-wrap, .p-sectionLinks, section, .main, main::before, #__next, .sidebar-wrapper, .sidebar-footer-wrapper, .sidebar-footer-container::before, #root, .min-h-screen.bg-white, .app, .AppContainer, .app-root, #wrapper, body[data-theme=\"dark\"], body[data-theme=\"light\"], #pass-sidebar, .side-bar, #main, .sidebar, .global-content__content, main, .header-top, #content, #cu-identity, section, .l-root, #__next, .landing-hero, #navigation-wrapper, #global-navbar, .layout__content-wrapper, .head.notfixed, .main-container, #app > div, .btm-nav > a, .oc-content--main, body.dark_mode, body.light_mode, text-div > textarea, #starlight__sidebar, .sidebar-pane, .page--article, #xf-guide, [data-color-theme] body, #__next > div, .hero-right, #middle, .HeaderLinks_header__Ia2QY, #page-content, section[data-role], #application, #Application, .application, .page-wrapper, .pageWrapper, .layout, .Layout, .shell, .Shell, .container-fluid, [class*=\"PageBackground\"], [class*=\"page-background\"], [class*=\"AppBackground\"], [class*=\"app-background\"], [class*=\"MainContent\"], [data-testid=\"page\"], [data-testid=\"background\"] {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}",
-      "darkreader $ This is a example description": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}\n@layer {\n  :root,\n  html,\n  body {\n    --darkreader-background-ffffff: transparent !important;\n    background-color: transparent !important;\n  }\n}",
-      "no footer": "footer, #Footer, .Footer, mfe-footer-pharos-footer, .footer, #footer {\n  display: none !important;\n}"
+      "transparency $ Full-page glass chrome for unthemed sites (Zen Internet force styling)": "html, body, :root, #root, #__next, #app, #App, .app, .App, .app-root, .AppContainer, #application, #Application, .application, main, Main, #main, #Main, #content, #Content, #page, #Page, .page, .Page, .page-wrapper, .pageWrapper, .layout, .Layout, .shell, .Shell, .container, .Container, .container-fluid, .wrapper, .Wrapper, section, article, aside, nav, navbar, #nav, #Nav, .nav, .Nav, .navbar, .Navbar, header, #header, #Header, .header, .Header, footer, #footer, #Footer, .footer, .Footer, .sidebar, .Sidebar, #sidebar, .side-bar, .toc-sidebar, [class*=\"PageBackground\"], [class*=\"page-background\"], [class*=\"pageBackground\"], [class*=\"AppBackground\"], [class*=\"app-background\"], [class*=\"appBackground\"], [class*=\"MainBackground\"], [class*=\"main-background\"], [class*=\"BackgroundContainer\"], [class*=\"background-container\"], [class*=\"LayoutBackground\"], [data-testid=\"page\"], [data-testid=\"background\"], [data-testid=\"app\"], [data-testid=\"layout\"], .min-h-screen, .min-h-screen.bg-white, body[data-theme=\"dark\"], body[data-theme=\"light\"], body.dark_mode, body.light_mode, [data-color-theme] body {\n  background-color: transparent !important;\n  background: none !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
+      "darkreader $ Clear Dark Reader opaque fills when force styling": ":root {\n  --darkreader-background-ffffff: transparent !important;\n  --darkreader-background-000000: transparent !important;\n}\n@layer {\n  :root,\n  html,\n  body {\n    --darkreader-background-ffffff: transparent !important;\n    background-color: transparent !important;\n  }\n}",
+      "muh glass overlays $ Soft glass for dialogs/menus without painting the whole page solid": "[role=\"dialog\"], [role=\"menu\"], [role=\"listbox\"], .modal, .Modal, .dialog, .Dialog, .popover, .Popover, .dropdown, .Dropdown, .menu-panel, .MenuPanel {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}",
+      "no footer": "footer, #Footer, .Footer, .footer, #footer {\n  display: none !important;\n}"
     },
     "excalidraw.com.css": {
       "Can't be themed ;( $ Unfortunately with how the canvas works in this website, We can not theme a js element with css to make it transparent. Would have been cool, I know": ":root {\n  --zeninternet: none;\n}"
@@ -1602,9 +1613,9 @@
       "hf-no footers": "footer {\n  display: none !important;\n}"
     },
     "hulu.com.css": {
-      "transparency": "html, body, #app, #root, #__next, .Application, .Application__page, .Page, .Nav, .Nav__container, .Header, .Footer, .cu-modal, .Modal, .Sidebar, .Browse, .Hub, .Collection, .Collection__container, main, [class*=\"Background\"], [class*=\"PageBackground\"], [class*=\"AppBackground\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Hulu chrome transparency (EME video stays protected)": "html, body, #app, #root, #__next, .Application, .Application__page, .Page, .Nav, .Nav__container, .Header, .Footer, .cu-modal, .Modal, .Sidebar, .Browse, .Hub, .Collection, .Collection__container, main, [class*=\"Background\"], [class*=\"PageBackground\"], [class*=\"AppBackground\"], [class*=\"SimpleModal\"], [class*=\"FullBleed\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
-      "glass chrome $ Soft glass for nav / overlays without covering video": ".Nav, .Header, .Modal__content, [class*=\"Dialog\"], [class*=\"Popover\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+      "glass chrome $ Soft glass for nav / overlays; do not restyle video": ".Nav, .Header, .Modal__content, [class*=\"Dialog\"], [class*=\"Popover\"], [role=\"dialog\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
     "icloud.com.css": {
       "transparency": "html, body, nav, header, .app-root, #pass-sidebar, #main, #content, section {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}\n.welcome-page-gradient-background, .homepage-gradient-background {\n  display: none !important;\n}"
@@ -1933,9 +1944,9 @@
       "no footer": "footer {\n  display: none !important;\n}"
     },
     "max.com.css": {
-      "transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"pageBackground\"], [class*=\"PageBackground\"], [class*=\"appBackground\"], [class*=\"AppShell\"], [class*=\"Layout\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Max / HBO Max chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"pageBackground\"], [class*=\"PageBackground\"], [class*=\"appBackground\"], [class*=\"AppShell\"], [class*=\"Layout\"], [class*=\"StyledPage\"], [class*=\"BackgroundContainer\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
-      "glass chrome $ Soft glass for headers/menus; leave player alone": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"Drawer\"], [class*=\"Menu\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"Drawer\"], [class*=\"Menu\"], [class*=\"Overlay\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
     "meduza.io.css": {
       "transparency": ".Layout-module-root, .GeneralMaterial-module-root {\n  background-color: transparent !important;\n}",
@@ -2105,10 +2116,10 @@
       "no footer": "footer {\n  display: none !important;\n}"
     },
     "netflix.com.css": {
-      "transparency": "body, html, #appMountPoint, .profiles-gate-container, .mainView, .pinning-header, .header-container, .watch-video, .watch-video--player-view, .default-ltr-yhcdbf-cache-1rt8xw3, .nf-modal .nf-modal-background, .player-loading, .player-loading .gradient, .nf-screen-wrapper {\n  background: transparent !important;\n  background-color: transparent !important;\n}",
+      "transparency $ Netflix chrome transparency (video pixels stay DRM-protected)": "html, body, #appMountPoint, .main-header, .pinning-header, .header-container, .mainView, .profiles-gate-container, .profile-gate-container, .watch-video, .watch-video--player-view, .player-loading, .player-loading .gradient, .nf-screen-wrapper, .nf-modal .nf-modal-background, .focus-trap, .about-wrapper, .member-footer {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
-      "transparent billboard fade $ makes the featured show/game fade into the background.": ".billboard-row .billboard .hero-image-wrapper .hero-vignette, .billboard-row .billboard, .billboard-row, .default-ltr-iqcdef-cache-1v829xk::after, .default-ltr-iqcdef-cache-1gluhd1::before {\n  background: transparent !important;\n}\n.billboard-row .billboard .hero-image-wrapper .hero-vignette, .billboard-row .billboard .hero-image-wrapper .trailer-vignette, .billboard-row .billboard .hero-image-wrapper .static-image, .billboard-row .billboard video, .default-ltr-iqcdef-cache-1x8ghsg, #\\38 2675013 > video:nth-child(1) {\n  mask-image: linear-gradient(180deg, #000000ff 0, #000000ff 80%, #00000055 88%, #00000000 98%, #00000000) !important;\n}",
-      "remove player black bars": ".default-ltr-iqcdef-cache-18tyyic {\n  background: transparent !important;\n}"
+      "transparent billboard fade $ Featured billboard fades into wallpaper": ".billboard-row .billboard .hero-image-wrapper .hero-vignette, .billboard-row .billboard, .billboard-row {\n  background: transparent !important;\n}\n.billboard-row .billboard .hero-image-wrapper .hero-vignette, .billboard-row .billboard .hero-image-wrapper .trailer-vignette, .billboard-row .billboard .hero-image-wrapper .static-image, .billboard-row .billboard video {\n  mask-image: linear-gradient(\n    180deg,\n    #000000ff 0,\n    #000000ff 80%,\n    #00000055 88%,\n    #00000000 98%,\n    #00000000\n  ) !important;\n}",
+      "glass chrome": ".pinning-header, .main-header, .nf-modal .nf-modal-content, [role=\"dialog\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
     "newcger.com.css": {
       "transparency": "html, body, header, section, .blockTit {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}",
@@ -2285,7 +2296,7 @@
       "no footer": "footer {\n  display: none !important;\n}"
     },
     "paramountplus.com.css": {
-      "transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"page\"], [class*=\"Background\"], [class*=\"Layout\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Paramount+ chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"page\"], [class*=\"Background\"], [class*=\"Layout\"], [class*=\"App\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
@@ -2302,7 +2313,7 @@
       "no footer": "footer {\n  display: none !important;\n}"
     },
     "peacocktv.com.css": {
-      "transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"Page\"], [class*=\"Background\"], [class*=\"Layout\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Peacock chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"Page\"], [class*=\"Background\"], [class*=\"Layout\"], [class*=\"AppShell\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"Drawer\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
@@ -2361,9 +2372,9 @@
       "gplay-app rounded banner": ".dzkqwc:has(c-wiz) {\n  border-radius: 2em !important;\n}\n.material-content {\n  box-shadow:\n    light-dark(#fff3, #0003) 0px -36px 30px 0px inset,\n    rgba(0, 0, 0, 0.06) 0px 2px 1px,\n    rgba(0, 0, 0, 0.09) 0px 4px 2px,\n    rgba(0, 0, 0, 0.09) 0px 8px 4px,\n    rgba(0, 0, 0, 0.09) 0px 16px 8px,\n    rgba(0, 0, 0, 0.09) 0px 32px 16px !important;\n  background-color: light-dark(#fff8, #0005) !important;\n  border-radius: 1em !important;\n}"
     },
     "play.max.com.css": {
-      "transparency": "html, body, #root, #app, main, [class*=\"pageBackground\"], [class*=\"PageBackground\"], [class*=\"appBackground\"], [class*=\"AppShell\"], [class*=\"Layout\"], header, nav, footer, aside {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ play.max.com player hub chrome": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"pageBackground\"], [class*=\"PageBackground\"], [class*=\"appBackground\"], [class*=\"AppShell\"], [class*=\"Layout\"], [class*=\"PlayerPage\"], [class*=\"Background\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
-      "glass chrome $ Soft glass for headers/menus; leave player alone": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"Drawer\"], [class*=\"Menu\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"], [class*=\"Drawer\"], [class*=\"Menu\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
     "play.pocketcasts.com.css": {
       "transparency": "html, body, nav, #nav, .nav, navbar, .navbar, #navbar, header, #header, .header, app, #app, .app, .app-root, #pass-sidebar, #main, main, .episode-search-input, #content, a.logo-link + div, section, #__next, #navigation-wrapper, #global-navbar, .head.notfixed, body[data-theme=\"dark\"], body[data-theme=\"light\"], body.dark_mode, body.light_mode {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}"
@@ -2408,7 +2419,7 @@
       "no footer": "footer, mfe-footer-pharos-footer, .footer, #footer {\n  display: none !important;\n}"
     },
     "primevideo.com.css": {
-      "transparency": "html, body, #root, #a-page, #dv-web-player, main, header, nav, footer, aside, [class*=\"av-bg\"], [class*=\"page-background\"], [class*=\"Background\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  box-shadow: none !important;\n}",
+      "transparency $ Prime Video chrome transparency": "html, body, #root, #a-page, #dv-web-player, main, header, nav, footer, aside, [class*=\"av-bg\"], [class*=\"page-background\"], [class*=\"Background\"], [class*=\"DVWebPlayer\"], .av-bg-image {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"modal\"], [class*=\"Modal\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
     },
@@ -2997,6 +3008,11 @@
       "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
       "no footer": "footer {\n  display: none !important;\n}"
     },
+    "tubi.tv.css": {
+      "transparency $ Tubi chrome transparency": "html, body, #root, #app, main, header, nav, footer, aside, [class*=\"Background\"], [class*=\"Page\"], [class*=\"Layout\"], [class*=\"web-app\"] {\n  background: transparent !important;\n  background-color: transparent !important;\n  background-image: none !important;\n  box-shadow: none !important;\n}",
+      "darkreader": ":root {\n  --darkreader-background-ffffff: transparent !important;\n}",
+      "glass chrome": "header, nav, [role=\"dialog\"], [class*=\"Modal\"] {\n  backdrop-filter: blur(20px) saturate(1.1) !important;\n  -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;\n  background-color: rgb(0 0 0 / 28%) !important;\n}"
+    },
     "tumblr.com.css": {
       "transparency": "html, body, nav, header, .app-root, #pass-sidebar, #main, #content, section, #base-container > div, .FA5JM {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}"
     },
@@ -3364,11 +3380,14 @@
     "max.com.css": [
       "play.hbomax.com",
       "www.max.com",
-      "hbomax.com"
+      "hbomax.com",
+      "www.hbomax.com"
+    ],
+    "play.max.com.css": [
+      "www.play.max.com"
     ],
     "primevideo.com.css": [
-      "www.primevideo.com",
-      "amazon.com/gp/video"
+      "www.primevideo.com"
     ],
     "disneyplus.com.css": [
       "www.disneyplus.com"
@@ -3382,8 +3401,19 @@
     "paramountplus.com.css": [
       "www.paramountplus.com"
     ],
-    "play.max.com.css": [
-      "www.play.max.com"
+    "netflix.com.css": [
+      "www.netflix.com"
+    ],
+    "crunchyroll.com.css": [
+      "www.crunchyroll.com"
+    ],
+    "tubi.tv.css": [
+      "www.tubi.tv",
+      "tubitv.com",
+      "www.tubitv.com"
+    ],
+    "discoveryplus.com.css": [
+      "www.discoveryplus.com"
     ]
   }
 }

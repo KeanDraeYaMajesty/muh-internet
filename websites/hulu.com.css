@@ -1,4 +1,4 @@
-/* transparency */
+/* transparency $ Hulu chrome transparency (EME video stays protected) */
 html,
 body,
 #app,
@@ -21,9 +21,12 @@ body,
 main,
 [class*="Background"],
 [class*="PageBackground"],
-[class*="AppBackground"] {
+[class*="AppBackground"],
+[class*="SimpleModal"],
+[class*="FullBleed"] {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
 }
 
@@ -32,12 +35,13 @@ main,
   --darkreader-background-ffffff: transparent !important;
 }
 
-/* glass chrome $ Soft glass for nav / overlays without covering video */
+/* glass chrome $ Soft glass for nav / overlays; do not restyle video */
 .Nav,
 .Header,
 .Modal__content,
 [class*="Dialog"],
-[class*="Popover"] {
+[class*="Popover"],
+[role="dialog"] {
   backdrop-filter: blur(20px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
   background-color: rgb(0 0 0 / 28%) !important;

@@ -1,20 +1,23 @@
-/* transparency */
+/* transparency $ play.max.com player hub chrome */
 html,
 body,
 #root,
 #app,
 main,
+header,
+nav,
+footer,
+aside,
 [class*="pageBackground"],
 [class*="PageBackground"],
 [class*="appBackground"],
 [class*="AppShell"],
 [class*="Layout"],
-header,
-nav,
-footer,
-aside {
+[class*="PlayerPage"],
+[class*="Background"] {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
 }
 
@@ -23,7 +26,7 @@ aside {
   --darkreader-background-ffffff: transparent !important;
 }
 
-/* glass chrome $ Soft glass for headers/menus; leave player alone */
+/* glass chrome */
 header,
 nav,
 [role="dialog"],

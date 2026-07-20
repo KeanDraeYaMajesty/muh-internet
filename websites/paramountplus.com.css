@@ -1,4 +1,4 @@
-/* transparency */
+/* transparency $ Paramount+ chrome transparency */
 html,
 body,
 #root,
@@ -10,9 +10,11 @@ footer,
 aside,
 [class*="page"],
 [class*="Background"],
-[class*="Layout"] {
+[class*="Layout"],
+[class*="App"] {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
 }
 

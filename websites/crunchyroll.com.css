@@ -1,19 +1,17 @@
-/* transparency $ Prime Video chrome transparency */
+/* transparency $ Crunchyroll chrome transparency */
 html,
 body,
 #root,
-#a-page,
-#dv-web-player,
+#app,
 main,
 header,
 nav,
 footer,
 aside,
-[class*="av-bg"],
-[class*="page-background"],
+[class*="erc-"],
+[class*="background"],
 [class*="Background"],
-[class*="DVWebPlayer"],
-.av-bg-image {
+[class*="Layout"] {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
@@ -29,8 +27,8 @@ aside,
 header,
 nav,
 [role="dialog"],
-[class*="modal"],
-[class*="Modal"] {
+[class*="Modal"],
+[class*="popover"] {
   backdrop-filter: blur(20px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(20px) saturate(1.1) !important;
   background-color: rgb(0 0 0 / 28%) !important;
