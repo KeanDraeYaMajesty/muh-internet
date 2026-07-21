@@ -425,8 +425,8 @@ ytd-two-column-browse-results-renderer:has(.ytd-playlist-video-renderer) {
   background: rgb(0 0 0 / 35%) !important;
   background-color: rgb(0 0 0 / 35%) !important;
   border: 1px solid rgb(255 255 255 / 14%) !important;
-  border-radius: 1em !important;
-  padding: 0.6em 1em !important;
+  border-radius: 2em !important;
+  padding: 0.75em 1.4em !important;
   box-shadow: none !important;
   width: fit-content !important;
 }
