@@ -509,14 +509,13 @@ yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) {
 
   .ytSearchboxComponentInputBox,
   #i0 {
-    background-color: light-dark(rgb(255 255 255 / 72%), rgb(40 40 44 / 58%)) !important;
+    background-color: light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 14%)) !important;
     border-radius: 980px !important;
     overflow: hidden !important;
     outline: none !important;
     filter: none !important;
-    box-shadow:
-      0 0.5px 0 light-dark(rgb(255 255 255 / 65%), rgb(255 255 255 / 12%)) inset,
-      0 12px 32px rgb(0 0 0 / 28%) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   #i0 {
@@ -729,7 +728,32 @@ tp-yt-paper-item.ytd-compact-link-renderer {
   background-color: transparent !important;
 }
 
-/* yt-muh clear search $ Mac-style glass pill search — rounded shadows only, no boxy ghosts */
+/* yt-muh clear search $ Flat Mac glass search — hairline only, zero elevation shadows */
+ytd-searchbox,
+#search-form.ytd-searchbox,
+#container.ytd-searchbox,
+yt-searchbox,
+.ytSearchboxComponentInputBox,
+.ytSearchboxComponentInputBoxDark,
+.ytSearchboxComponentSearchButton,
+.ytSearchboxComponentSearchButtonDark,
+.ytSearchboxComponentInput,
+input#search,
+#search-input,
+[class*="ytSearchboxComponent"][class*="Ask"],
+[class*="ytSearchboxComponent"][class*="Suggestion"],
+[class*="ytSearchboxComponent"][class*="TextInput"],
+[class*="ytSearchboxComponent"][class*="Host"],
+yt-searchbox *,
+#container.ytd-searchbox *,
+#search-form.ytd-searchbox * {
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
 ytd-searchbox,
 #search-form.ytd-searchbox,
 #container.ytd-searchbox,
@@ -748,9 +772,6 @@ input#search,
   background: transparent !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-  filter: none !important;
 }
 
 yt-searchbox,
@@ -758,38 +779,27 @@ yt-searchbox,
 #search-form.ytd-searchbox,
 .ytSearchboxComponentInputBox,
 .ytSearchboxComponentInputBoxDark {
-  backdrop-filter: blur(20px) saturate(1.2) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(1.2) !important;
-  background-color: light-dark(rgb(255 255 255 / 55%), rgb(30 30 32 / 45%)) !important;
-  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 22%)) !important;
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  background-color: light-dark(rgb(255 255 255 / 40%), rgb(255 255 255 / 12%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 14%), rgb(255 255 255 / 20%)) !important;
   border-radius: 980px !important;
   overflow: hidden !important;
-  box-shadow:
-    0 0.5px 0 light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 10%)) inset,
-    0 8px 24px rgb(0 0 0 / 18%) !important;
-  outline: none !important;
-  filter: none !important;
 }
 
 .ytSearchboxComponentInputBoxHasFocus,
 yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBox,
 yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBoxDark {
-  background-color: light-dark(rgb(255 255 255 / 72%), rgb(40 40 44 / 58%)) !important;
-  border-color: light-dark(rgb(0 0 0 / 16%), rgb(255 255 255 / 28%)) !important;
-  box-shadow:
-    0 0.5px 0 light-dark(rgb(255 255 255 / 65%), rgb(255 255 255 / 12%)) inset,
-    0 10px 28px rgb(0 0 0 / 22%),
-    0 0 0 3px color-mix(in srgb, rgb(122 168 255) 28%, transparent) !important;
+  background-color: light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 16%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 28%)) !important;
 }
 
 [class*="ytSearchboxComponent"][class*="Ask"],
 .ytSearchboxComponentSearchButton,
 .ytSearchboxComponentSearchButtonDark {
-  background-color: light-dark(rgb(0 0 0 / 6%), rgb(255 255 255 / 10%)) !important;
-  border: none !important;
+  background-color: light-dark(rgb(255 255 255 / 28%), rgb(255 255 255 / 10%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 10%), rgb(255 255 255 / 16%)) !important;
   border-radius: 980px !important;
-  box-shadow: none !important;
-  outline: none !important;
   color: inherit !important;
 }
 
@@ -799,15 +809,16 @@ yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInp
 .sbdd_b,
 ul[role="listbox"].sbsb_b {
   background: transparent !important;
-  background-color: light-dark(rgb(255 255 255 / 62%), rgb(28 28 30 / 55%)) !important;
-  backdrop-filter: blur(24px) saturate(1.2) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(1.2) !important;
-  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
+  background-color: light-dark(rgb(255 255 255 / 50%), rgb(20 20 22 / 45%)) !important;
+  backdrop-filter: blur(20px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.15) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 16%)) !important;
   border-radius: 1em !important;
-  box-shadow: 0 12px 36px rgb(0 0 0 / 28%) !important;
   overflow: hidden !important;
+  box-shadow: none !important;
   outline: none !important;
   filter: none !important;
+  text-shadow: none !important;
 }
 
 /* yt-muh comments gutter $ Keep comments panel from overlapping related content */
@@ -875,7 +886,23 @@ ytd-playlist-panel-video-renderer *,
   text-shadow: none !important;
 }
 
-/* yt-muh readable chips $ Mac-style glass pills — kill boxy outlines/shadows that ignore border-radius */
+/* yt-muh readable chips $ Flat glass pills — no text/box/filter shadows */
+yt-chip-cloud-chip-renderer,
+.ytChipShapeChip,
+yt-chip-cloud-chip-renderer button,
+yt-chip-cloud-chip-renderer iron-button,
+yt-chip-cloud-chip-renderer .yt-spec-button-shape-next,
+#chips-wrapper yt-chip-cloud-chip-renderer,
+#chips yt-chip-cloud-chip-renderer,
+yt-chip-cloud-chip-renderer *,
+.ytChipShapeChip * {
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
 yt-chip-cloud-chip-renderer,
 .ytChipShapeChip,
 yt-chip-cloud-chip-renderer button,
@@ -884,19 +911,10 @@ yt-chip-cloud-chip-renderer .yt-spec-button-shape-next,
 #chips-wrapper yt-chip-cloud-chip-renderer,
 #chips yt-chip-cloud-chip-renderer {
   background: transparent !important;
-  background-color: light-dark(rgb(255 255 255 / 42%), rgb(255 255 255 / 10%)) !important;
+  background-color: light-dark(rgb(255 255 255 / 28%), rgb(255 255 255 / 12%)) !important;
   border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
   border-radius: 980px !important;
-  outline: none !important;
-  box-shadow: none !important;
-  filter: none !important;
   overflow: hidden !important;
-  text-shadow: none !important;
-}
-
-yt-chip-cloud-chip-renderer *,
-.ytChipShapeChip * {
-  text-shadow: none !important;
 }
 
 yt-chip-cloud-chip-renderer::before,
@@ -910,24 +928,23 @@ yt-chip-cloud-chip-renderer button::after {
   border: none !important;
   background: transparent !important;
   filter: none !important;
+  content: none !important;
 }
 
 yt-chip-cloud-chip-renderer[selected],
 yt-chip-cloud-chip-renderer[aria-selected="true"],
 .ytChipShapeActive,
 .ytChipShapeChip[aria-selected="true"] {
-  background-color: light-dark(rgb(0 0 0 / 78%), rgb(255 255 255 / 88%)) !important;
-  border-color: light-dark(rgb(0 0 0 / 40%), rgb(255 255 255 / 55%)) !important;
-  color: light-dark(rgb(255 255 255 / 96%), rgb(0 0 0 / 90%)) !important;
-  box-shadow:
-    0 0.5px 0 light-dark(rgb(255 255 255 / 18%), rgb(255 255 255 / 70%)) inset,
-    0 4px 14px rgb(0 0 0 / 22%) !important;
+  background-color: light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 22%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 32%)) !important;
+  color: light-dark(rgb(0 0 0 / 88%), rgb(255 255 255 / 96%)) !important;
+  box-shadow: none !important;
 }
 
 yt-chip-cloud-chip-renderer:hover:not([selected]):not([aria-selected="true"]),
 .ytChipShapeChip:hover:not([aria-selected="true"]):not(.ytChipShapeActive) {
-  background-color: light-dark(rgb(255 255 255 / 58%), rgb(255 255 255 / 16%)) !important;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 14%) !important;
+  background-color: light-dark(rgb(255 255 255 / 40%), rgb(255 255 255 / 16%)) !important;
+  box-shadow: none !important;
 }
 
 /* yt-muh readable hover $ Visible glass highlight on menu items, guide entries and buttons */
@@ -949,7 +966,18 @@ yt-img-shadow img {
   mix-blend-mode: normal !important;
 }
 
-/* yt-muh glass queue highlight $ Soft glass wash on the active queue item — no dark opaque slab */
+/* yt-muh glass queue highlight $ Flat glass wash on the active queue item — no slab, no word shadows */
+ytd-playlist-panel-renderer,
+ytd-playlist-panel-renderer *,
+ytd-playlist-panel-video-renderer,
+ytd-playlist-panel-video-renderer *,
+#playlist,
+#playlist * {
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  filter: none !important;
+}
+
 ytd-playlist-panel-video-renderer[selected],
 ytd-playlist-panel-video-renderer[selected] #content,
 ytd-playlist-panel-video-renderer[selected] a,
@@ -959,7 +987,8 @@ ytd-playlist-panel-video-renderer[selected] .yt-simple-endpoint,
 ytd-playlist-panel-renderer ytd-playlist-panel-video-renderer[selected],
 ytd-playlist-panel-renderer #items ytd-playlist-panel-video-renderer[selected] {
   background: transparent !important;
-  background-color: rgb(255 255 255 / 10%) !important;
+  background-color: rgb(255 255 255 / 8%) !important;
+  border: 0.5px solid rgb(255 255 255 / 14%) !important;
   border-radius: 0.75em !important;
   box-shadow: none !important;
   outline: none !important;
@@ -969,19 +998,13 @@ ytd-playlist-panel-renderer #items ytd-playlist-panel-video-renderer[selected] {
   --yt-spec-brand-background-primary: transparent !important;
   --yt-spec-raised-background: transparent !important;
   --paper-item-selected-color: transparent !important;
-  text-shadow: none !important;
-}
-
-ytd-playlist-panel-video-renderer[selected] *,
-ytd-playlist-panel-video-renderer * {
-  text-shadow: none !important;
 }
 
 ytd-playlist-panel-video-renderer:hover:not([selected]),
 ytd-playlist-panel-video-renderer:hover:not([selected]) #content,
 ytd-playlist-panel-video-renderer:hover:not([selected]) a {
   background: transparent !important;
-  background-color: rgb(255 255 255 / 6%) !important;
+  background-color: rgb(255 255 255 / 5%) !important;
   border-radius: 0.75em !important;
   box-shadow: none !important;
 }
