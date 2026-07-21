@@ -1,3 +1,21 @@
+/* muh glass tuning $ Central knobs shared with YouTube muh-internet glass */
+:root {
+  --muh-blur: 24px;
+  --muh-media-blur: 28px;
+  --muh-frost-tint: rgb(0 0 0 / 35%);
+  --muh-glass-1: light-dark(rgb(255 255 255 / 5%), rgb(0 0 0 / 6%));
+  --muh-glass-2: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%));
+  --muh-glass-3: light-dark(rgb(255 255 255 / 16%), rgb(0 0 0 / 20%));
+  --muh-panel-tint: var(--muh-glass-2);
+  --muh-border: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%));
+  --muh-text-shadow: 0 0 2px light-dark(rgb(255 255 255 / 70%), rgb(0 0 0 / 75%)),
+    0 1px 3px light-dark(rgb(255 255 255 / 45%), rgb(0 0 0 / 55%));
+  --muh-fg: light-dark(rgb(18 18 20 / 94%), rgb(242 244 248 / 95%));
+  --muh-fg-muted: light-dark(rgb(50 52 58 / 85%), rgb(200 206 216 / 85%));
+  --muh-accent: rgb(122 168 255);
+  --muh-radius: 0.85em;
+}
+
 /* transparency $ Max / HBO Max chrome transparency */
 html,
 body,
@@ -12,7 +30,6 @@ aside,
 [class*="PageBackground"],
 [class*="appBackground"],
 [class*="AppShell"],
-[class*="Layout"],
 [class*="StyledPage"],
 [class*="BackgroundContainer"] {
   background: transparent !important;
@@ -26,15 +43,59 @@ aside,
   --darkreader-background-ffffff: transparent !important;
 }
 
-/* clear chrome */
+/* clear chrome $ Low-alpha nav / dialogs; avoid Overlay/Menu substring traps */
 header,
 nav,
 [role="dialog"],
+[role="menu"],
 [class*="Modal"],
-[class*="Drawer"],
-[class*="Menu"],
-[class*="Overlay"] {
+[class*="Drawer"] {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  background-color: rgb(0 0 0 / 10%) !important;
+  background-color: var(--muh-panel-tint, rgb(0 0 0 / 12%)) !important;
+  border: 1px solid var(--muh-border, rgb(255 255 255 / 16%)) !important;
+  border-radius: var(--muh-radius, 0.85em) !important;
+  color: var(--muh-fg, rgb(242 244 248 / 95%)) !important;
+}
+
+/* frosted media $ Frost player shell only; keep DRM video fully opaque */
+[class*="PlayerPage"],
+[class*="playerContainer"],
+[class*="PlayerContainer"],
+[data-testid*="player" i]:not([data-testid*="caption" i]):not([data-testid*="subtitle" i]) {
+  backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  background-color: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  isolation: isolate !important;
+}
+
+video {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* readable text $ Dual-halo legibility over wallpaper */
+h1,
+h2,
+h3,
+[class*="Title"]:not([class*="Subtitle"]),
+[class*="Headline"] {
+  text-shadow: var(--muh-text-shadow) !important;
+  color: var(--muh-fg, rgb(242 244 248 / 95%)) !important;
+}
+
+/* muh captions $ Native cues only — do not restyle positioned caption wrappers */
+::cue {
+  background-color: rgb(0 0 0 / 45%) !important;
+  color: rgb(255 255 255 / 98%) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 80%) !important;
+}
+
+/* solid images $ Keep posters and artwork fully opaque */
+img,
+picture,
+canvas {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }

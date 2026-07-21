@@ -1,70 +1,54 @@
-/* twitch-transparency */
+/* muh glass tuning $ Central knobs shared with YouTube muh-internet glass */
+:root {
+  --muh-blur: 24px;
+  --muh-media-blur: 28px;
+  --muh-frost-tint: rgb(0 0 0 / 35%);
+  --muh-glass-1: light-dark(rgb(255 255 255 / 5%), rgb(0 0 0 / 6%));
+  --muh-glass-2: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%));
+  --muh-glass-3: light-dark(rgb(255 255 255 / 16%), rgb(0 0 0 / 20%));
+  --muh-panel-tint: var(--muh-glass-2);
+  --muh-border: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%));
+  --muh-text-shadow: 0 0 2px light-dark(rgb(255 255 255 / 70%), rgb(0 0 0 / 75%)),
+    0 1px 3px light-dark(rgb(255 255 255 / 45%), rgb(0 0 0 / 55%));
+  --muh-fg: light-dark(rgb(18 18 20 / 94%), rgb(242 244 248 / 95%));
+  --muh-fg-muted: light-dark(rgb(50 52 58 / 85%), rgb(200 206 216 / 85%));
+  --muh-accent: rgb(122 168 255);
+  --muh-radius: 0.85em;
+}
 
+/* twitch-transparency $ Clear page chrome; keep stream pixels and avatars opaque */
 html,
 body,
 nav,
 header,
-.chat-room,
+main,
+.channel-root,
+.channel-root__info,
 .channel-root__right-column,
-.Layout-sc-1xcs6mc-0.cCSAoN,
-.Layout-sc-1xcs6mc-0.LJevC,
-.Layout-sc-1xcs6mc-0.gDDWxy,
-.Layout-sc-1xcs6mc-0.gyMdFQ,
-.Layout-sc-1xcs6mc-0.bXENUW,
-.Layout-sc-1xcs6mc-0.jmERFg,
-.Layout-sc-1xcs6mc-0.dRMwTz,
-.Layout-sc-1xcs6mc-0.cMeiZH,
-.Layout-sc-1xcs6mc-0.gGBpkX,
-.Layout-sc-1xcs6mc-0.iSIERH,
-.Layout-sc-1xcs6mc-0.dewBQX,
-.Layout-sc-1xcs6mc-0.eOHCrm,
-.Layout-sc-1xcs6mc-0.kjWTWh,
-.ScAvatar-sc-144b42z-0.dLsNfm.tw-avatar,
-.ScAvatar-sc-144b42z-0.dLsNfm,
 .channel-info-content,
 .live-channel-stream-information,
-.Layout-sc-1xcs6mc-0.skip-to-target,
-.live-channel-stream-information,
-.Layout-sc-1xcs6mc-0.hatjTq,
-.Layout-sc-1xcs6mc-0.cSIZZn,
-.Layout-sc-1xcs6mc-0.eTyMgg,
-.channel-root__info.channel-root__info--with-chat,
-.InjectLayout-sc-1i43xsx-0.persistent-player,
-.Layout-sc-1xcs6mc-0.bXENUW.chat-room__content,
-.Layout-sc-1xcs6mc-0.gQAGKi.bits-leaderboard-expanded-top-three-entry,
-.Layout-sc-1xcs6mc-0.JxIvc.marquee-animation__original,
-.Layout-sc-1xcs6mc-0.jmERFg.stream-chat-header,
-.channel-root__right-column.channel-root__right-column--expanded,
-.bits-leaderboard-expanded-top-three-entry,
-.marquee-animation__original,
-.stream-chat-header,
-.chat-room__content,
-.stream-chat,
-.chat-shell,
-.chat-shell__expanded,
-.ixiIRM > div:nth-child(1),
-.stream-display-ad__container_squeezeback,
-.video-player,
-.channel-root,
-.top-nav__menu,
-.video-player__container,
-.channel-root__player > div > div,
-.channel-root,
 .side-nav,
-.channel-info-content,
-.channel-root__info:not(:has(#offline-channel-main-content)) {
+.top-nav__menu,
+.stream-display-ad__container_squeezeback {
   background-color: transparent !important;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
 }
-#offline-channel-main-content {
-  background-color: var(--color-background-body) !important;
-}
+
 main {
   border-radius: 1em !important;
 }
 
+#offline-channel-main-content {
+  background-color: var(--color-background-body) !important;
+}
+
+.channel-root__info {
+  position: relative;
+}
+
+/* twitch theater hide $ Hide chrome in theater mode for an immersive stream */
 body:has(.persistent-player--theatre) {
   .channel-root,
   nav,
@@ -73,17 +57,75 @@ body:has(.persistent-player--theatre) {
   }
 }
 
-.highlight,
+/* twitch glass chat $ Elevated glass panels for chat / side column like YT queue */
+.chat-room,
+.chat-shell,
+.chat-shell__expanded,
+.stream-chat,
+.stream-chat-header,
+.chat-room__content,
+.channel-root__right-column,
+.channel-root__right-column--expanded {
+  background: transparent !important;
+  background-color: var(--muh-glass-2, rgb(0 0 0 / 12%)) !important;
+  border: 1px solid var(--muh-border, rgb(255 255 255 / 16%)) !important;
+  border-radius: var(--muh-radius, 0.85em) !important;
+  box-shadow: none !important;
+  color: var(--muh-fg, rgb(242 244 248 / 95%)) !important;
+}
+
 .chat-input-tray__open,
-.Layout-sc-1xcs6mc-0.kelbCv {
-  background-color: var(--color-background-input-checkbox-checked-background) !important;
+.highlight {
+  background-color: var(--muh-glass-3, rgb(0 0 0 / 20%)) !important;
+  border-radius: calc(var(--muh-radius, 0.85em) / 1.5) !important;
+}
+
+/* frosted media $ Frost Twitch player shell only; keep stream fully opaque */
+.video-player,
+.video-player__container,
+.persistent-player,
+.InjectLayout-sc-1i43xsx-0.persistent-player {
+  backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  background-color: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  isolation: isolate !important;
+}
+
+video,
+.video-player video {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
+
+/* readable text $ Dual-halo legibility over wallpaper */
+h1,
+h2,
+h3,
+.tw-title,
+[data-a-target="stream-title"] {
+  text-shadow: var(--muh-text-shadow) !important;
+  color: var(--muh-fg, rgb(242 244 248 / 95%)) !important;
+}
+
+/* muh captions $ Native cues only — do not restyle positioned caption wrappers */
+::cue {
+  background-color: rgb(0 0 0 / 45%) !important;
+  color: rgb(255 255 255 / 98%) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 80%) !important;
+}
+
+/* solid images $ Keep posters, emotes, and avatars fully opaque */
+img,
+picture,
+canvas,
+.tw-avatar,
+.tw-image-avatar {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 /* twitch-no footer */
 footer {
   display: none !important;
-}
-
-.channel-root__info {
-  position: relative;
 }
