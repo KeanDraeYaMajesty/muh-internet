@@ -1,17 +1,66 @@
 /* fb-transparency */
-:root {
+:root,
+.__fb-light-mode:root,
+.__fb-light-mode,
+.__fb-dark-mode:root,
+.__fb-dark-mode {
   --web-wash: #00000000 !important;
+  --wash: #00000000 !important;
   --nav-bar-background: #00000000 !important;
+  --nav-bar-background-gradient: none !important;
+  --nav-bar-background-gradient-wash: none !important;
+  --card-background: transparent !important;
+  --card-background-flat: transparent !important;
+  --card-background-filled: transparent !important;
+  --card-box-shadow: none !important;
+  --surface-background: transparent !important;
+  --hero-banner-background: transparent !important;
+  --background-deemphasized: transparent !important;
+  --comment-background: rgb(255 255 255 / 8%) !important;
+  --comment-footer-background: transparent !important;
+  --attachment-footer-background: transparent !important;
+  --media-outer-border: transparent !important;
+  --media-inner-border: transparent !important;
+  --darkreader-background-ffffff: transparent !important;
 }
 
 body,
-#mount_0_0_u1 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+div[id^="mount_"] > div > div > div > div:nth-child(3) {
   background-color: #00000000 !important;
   transition:
     background-color 0.5s ease-in-out,
     background 0.5s ease-in-out,
     border 0.5s ease-in-out,
     box-shadow 0.5s ease-in-out !important;
+}
+
+/* fb clear posts — no dark card fill / shadow */
+[role="article"],
+[role="feed"] [role="article"],
+[data-pagelet*="FeedUnit"],
+div[data-ad-preview="message"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+[role="article"] > div,
+[role="article"] > div > div,
+[data-pagelet*="FeedUnit"] > div,
+[data-pagelet*="FeedUnit"] > div > div {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* fb media letterbox — kill black bars behind photos/collages */
+[role="article"] a[role="link"] > div,
+[role="article"] img + div,
+[data-visualcompletion="media-vc-image"],
+[role="article"] [style*="background-color: rgb(0, 0, 0)"],
+[role="article"] [style*="background-color:#000"] {
+  background-color: transparent !important;
 }
 
 /* fb-other changes */
