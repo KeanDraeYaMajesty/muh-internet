@@ -372,9 +372,7 @@ audio,
   border-radius: 2em !important;
   padding: 0.4em 1em !important;
   box-shadow: none !important;
-  width: fit-content !important;
-  max-width: 90% !important;
-  margin-inline: auto !important;
+  /* No width/margin overrides: players position caption wrappers themselves */
 }
 
 /* Keep the caption text itself clean over the frosted bubble */
