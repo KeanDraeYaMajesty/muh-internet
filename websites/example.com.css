@@ -5,13 +5,21 @@
   --muh-media-blur: 28px;
   /* dark veil behind frosted surfaces */
   --muh-frost-tint: rgb(0 0 0 / 35%);
+  /* glass elevation tiers: page < card < panel < overlay */
+  --muh-glass-1: light-dark(rgb(255 255 255 / 5%), rgb(0 0 0 / 6%));
+  --muh-glass-2: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%));
+  --muh-glass-3: light-dark(rgb(255 255 255 / 16%), rgb(0 0 0 / 20%));
   /* clear-glass panel fill (menus, dialogs) */
-  --muh-panel-tint: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%));
+  --muh-panel-tint: var(--muh-glass-2);
   /* hairline borders on glass surfaces */
   --muh-border: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%));
-  /* legibility shadow behind text over wallpaper */
-  --muh-text-shadow: 0 1px 2.5px light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 65%));
-  /* accent for focus rings + selection */
+  /* dual halo: tight contrast hug + soft drop so text reads on any wallpaper */
+  --muh-text-shadow: 0 0 2px light-dark(rgb(255 255 255 / 70%), rgb(0 0 0 / 75%)),
+    0 1px 3px light-dark(rgb(255 255 255 / 45%), rgb(0 0 0 / 55%));
+  /* readable floor for body + muted text */
+  --muh-fg: light-dark(rgb(18 18 20 / 94%), rgb(242 244 248 / 95%));
+  --muh-fg-muted: light-dark(rgb(50 52 58 / 85%), rgb(200 206 216 / 85%));
+  /* accent for links, focus rings + selection */
   --muh-accent: rgb(122 168 255);
   --muh-radius: 0.85em;
 }
@@ -121,7 +129,7 @@ body.light_mode,
   }
 }
 
-/* muh readable text $ Soft shadow behind headings and body copy so text stays legible over any wallpaper */
+/* muh readable text $ Dual-halo shadow behind headings and body copy so text stays legible over any wallpaper */
 h1,
 h2,
 h3,
@@ -142,7 +150,103 @@ td,
 [class*="Title"],
 [class*="headline"],
 [class*="Headline"] {
-  text-shadow: var(--muh-text-shadow, 0 1px 2.5px light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 65%))) !important;
+  text-shadow: var(--muh-text-shadow, 0 0 2px light-dark(rgb(255 255 255 / 70%), rgb(0 0 0 / 75%)), 0 1px 3px light-dark(rgb(255 255 255 / 45%), rgb(0 0 0 / 55%))) !important;
+}
+
+/* muh contrast floor $ Lift washed-out gray/muted text to a readable minimum over glass */
+p,
+li,
+dd,
+figcaption,
+blockquote {
+  color: var(--muh-fg, light-dark(rgb(18 18 20 / 94%), rgb(242 244 248 / 95%))) !important;
+}
+
+small,
+time,
+caption,
+[class*="muted"],
+[class*="Muted"],
+[class*="secondary-text"],
+[class*="SecondaryText"],
+[class*="subtext"],
+[class*="Subtext"],
+[class*="subtitle"],
+[class*="Subtitle"],
+[class*="description"],
+[class*="Description"],
+[class*="meta"]:not(meta),
+[class*="caption"],
+[class*="text-gray"],
+[class*="text-neutral"],
+[class*="text-slate"],
+[class*="text-zinc"] {
+  color: var(--muh-fg-muted, light-dark(rgb(50 52 58 / 85%), rgb(200 206 216 / 85%))) !important;
+}
+
+/* muh vibrant links $ Accent-colored links with a clear hover state */
+a:not([class*="button"]):not([class*="Button"]):not([role="button"]) {
+  color: color-mix(in srgb, var(--muh-accent, rgb(122 168 255)) 85%, light-dark(black, white)) !important;
+  text-decoration-color: color-mix(in srgb, var(--muh-accent, rgb(122 168 255)) 45%, transparent) !important;
+}
+
+a:not([class*="button"]):not([class*="Button"]):not([role="button"]):hover {
+  color: var(--muh-accent, rgb(122 168 255)) !important;
+  text-decoration: underline !important;
+}
+
+/* muh focus ring $ Consistent accent focus ring for keyboard navigation everywhere */
+:focus-visible {
+  outline: 2px solid var(--muh-accent, rgb(122 168 255)) !important;
+  outline-offset: 1px !important;
+  border-radius: calc(var(--muh-radius, 0.85em) / 2);
+}
+
+/* muh glass cards $ Faint tier-1 glass on cards so content hierarchy survives full transparency */
+.card,
+.Card,
+[class*="card-body"],
+[class*="CardBody"],
+[class*="card-container"],
+[class*="CardContainer"],
+.panel,
+.Panel,
+.tile,
+.Tile,
+.well,
+.box:not(.checkbox):not(.combobox) {
+  background: transparent !important;
+  background-color: var(--muh-glass-1, light-dark(rgb(255 255 255 / 5%), rgb(0 0 0 / 6%))) !important;
+  border: 1px solid var(--muh-border, light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%))) !important;
+  border-radius: var(--muh-radius, 0.85em) !important;
+  box-shadow: none !important;
+  transition: background-color 0.18s ease !important;
+}
+
+.card:hover,
+.Card:hover,
+.panel:hover,
+.Panel:hover,
+.tile:hover,
+.Tile:hover {
+  background-color: var(--muh-glass-2, light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%))) !important;
+}
+
+/* muh sticky frost $ Light frost on fixed/sticky headers so content scrolling under them stays readable */
+[class*="sticky-header"],
+[class*="StickyHeader"],
+[class*="fixed-header"],
+[class*="FixedHeader"],
+[class*="sticky-top"],
+[class*="navbar-fixed"],
+header[class*="sticky"],
+header[class*="fixed"],
+nav[class*="sticky"],
+nav[class*="fixed"] {
+  backdrop-filter: blur(calc(var(--muh-blur, 24px) / 2)) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(calc(var(--muh-blur, 24px) / 2)) saturate(1.1) !important;
+  background-color: var(--muh-glass-1, light-dark(rgb(255 255 255 / 5%), rgb(0 0 0 / 6%))) !important;
+  border-bottom: 1px solid var(--muh-border, light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%))) !important;
 }
 
 /* muh frosted overlays $ Alternative look: frost dialogs/menus (disable "muh clear overlays" to use this) */
@@ -346,9 +450,9 @@ audio,
   text-shadow: 0 1px 3px rgb(0 0 0 / 80%) !important;
 }
 
-/* Only text-hugging elements — never player-positioned wrappers */
 .player-timedtext-text-container span,
 .atvwebplayersdk-captions-text span {
+  /* text-hugging elements only — never player-positioned wrappers */
   background: rgb(0 0 0 / 45%) !important;
   background-color: rgb(0 0 0 / 45%) !important;
   color: rgb(255 255 255 / 98%) !important;
