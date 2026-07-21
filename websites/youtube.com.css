@@ -271,26 +271,36 @@ ytd-merch-shelf-renderer,
   display: none !important;
 }
 
-/* yt-Transparent video background */
-.html5-main-video,
-.html5-video-container,
-#movie_player,
-#container,
-#ytd-player,
-#player-container,
-#player-full-bleed-container,
-#full-bleed-container,
-ytlr-player {
-  background-color: #00000000 !important;
-  background: transparent !important;
-}
-
+/* yt-Transparent video background $ Hide cinematic glow; keep the video surface opaque so wallpaper does not bleed through on Zen */
 #cinematics {
   display: none !important;
 }
 
 .ytp-gradient-bottom {
   display: none !important;
+}
+
+.html5-video-container,
+#movie_player,
+#ytd-player,
+#player-container,
+#player-container-inner,
+#player-full-bleed-container,
+#full-bleed-container,
+ytlr-player,
+.html5-main-video,
+video.html5-main-video {
+  background-color: #000 !important;
+  background: #000 !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+.html5-main-video,
+video.html5-main-video,
+#movie_player video {
+  opacity: 1 !important;
+  isolation: isolate !important;
 }
 
 /* yt-no ambient mode */

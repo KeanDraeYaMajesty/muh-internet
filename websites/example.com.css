@@ -131,3 +131,22 @@ footer,
 #footer {
   display: none !important;
 }
+
+/* opaque media $ Keep video/audio surfaces solid while page chrome stays transparent */
+video,
+audio,
+.html5-video-player,
+.html5-main-video,
+.html5-video-container,
+.video-js,
+.vjs-tech,
+[class*="video-player"],
+[class*="VideoPlayer"],
+[class*="player-container"] video,
+[class*="PlayerContainer"] video {
+  opacity: 1 !important;
+  background-color: #000 !important;
+  background: #000 !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+}
