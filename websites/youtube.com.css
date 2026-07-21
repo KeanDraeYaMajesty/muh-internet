@@ -856,14 +856,22 @@ ytd-channel-name,
 ytd-watch-metadata #title,
 ytd-comment-view-model #content-text,
 #author-text,
-.yt-core-attributed-string,
-.ytd-guide-entry-renderer,
-yt-formatted-string {
+.ytd-guide-entry-renderer {
   text-shadow: 0 1px 2.5px rgb(0 0 0 / 65%) !important;
 }
 
 .html5-video-player yt-formatted-string,
-.ytp-chrome-bottom yt-formatted-string {
+.ytp-chrome-bottom yt-formatted-string,
+yt-chip-cloud-chip-renderer,
+yt-chip-cloud-chip-renderer *,
+.ytChipShapeChip,
+.ytChipShapeChip *,
+ytd-playlist-panel-renderer,
+ytd-playlist-panel-renderer *,
+ytd-playlist-panel-video-renderer,
+ytd-playlist-panel-video-renderer *,
+#playlist,
+#playlist * {
   text-shadow: none !important;
 }
 
@@ -883,6 +891,11 @@ yt-chip-cloud-chip-renderer .yt-spec-button-shape-next,
   box-shadow: none !important;
   filter: none !important;
   overflow: hidden !important;
+  text-shadow: none !important;
+}
+
+yt-chip-cloud-chip-renderer *,
+.ytChipShapeChip * {
   text-shadow: none !important;
 }
 
@@ -956,6 +969,12 @@ ytd-playlist-panel-renderer #items ytd-playlist-panel-video-renderer[selected] {
   --yt-spec-brand-background-primary: transparent !important;
   --yt-spec-raised-background: transparent !important;
   --paper-item-selected-color: transparent !important;
+  text-shadow: none !important;
+}
+
+ytd-playlist-panel-video-renderer[selected] *,
+ytd-playlist-panel-video-renderer * {
+  text-shadow: none !important;
 }
 
 ytd-playlist-panel-video-renderer:hover:not([selected]),
