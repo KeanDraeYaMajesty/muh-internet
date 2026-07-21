@@ -338,3 +338,51 @@ audio,
   background: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
   isolation: isolate !important;
 }
+
+/* muh captions $ Frosted-bubble subtitles across native video + streaming players (matches yt-better captions) */
+::cue {
+  background-color: rgb(0 0 0 / 45%) !important;
+  color: rgb(255 255 255 / 98%) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 80%) !important;
+  font-family: Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+/* Streaming overlay caption containers — frost the bubble like the video area */
+.player-timedtext,
+.player-timedtext-text-container,
+.CaptionBox,
+.closed-caption-container,
+.captions-container,
+.atvwebplayersdk-captions-overlay,
+.atvwebplayersdk-captions-text,
+.f2M7ee,
+[class*="TimedText"],
+[class*="timed-text"],
+[class*="subtitle-window"],
+[class*="SubtitleWindow"],
+[class*="caption-window"],
+[class*="CaptionWindow"],
+[data-testid*="caption" i],
+[data-testid*="subtitle" i] {
+  backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  background-color: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  background: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  border: 1px solid rgb(255 255 255 / 14%) !important;
+  border-radius: 2em !important;
+  padding: 0.4em 1em !important;
+  box-shadow: none !important;
+  width: fit-content !important;
+  max-width: 90% !important;
+  margin-inline: auto !important;
+}
+
+/* Keep the caption text itself clean over the frosted bubble */
+.player-timedtext-text-container span,
+.atvwebplayersdk-captions-text span,
+[class*="TimedText"] span,
+[class*="subtitle" i] span {
+  background: transparent !important;
+  background-color: transparent !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 70%) !important;
+}
