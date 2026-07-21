@@ -935,3 +935,34 @@ yt-img-shadow img {
   opacity: 1 !important;
   mix-blend-mode: normal !important;
 }
+
+/* yt-muh glass queue highlight $ Soft glass wash on the active queue item — no dark opaque slab */
+ytd-playlist-panel-video-renderer[selected],
+ytd-playlist-panel-video-renderer[selected] #content,
+ytd-playlist-panel-video-renderer[selected] a,
+ytd-playlist-panel-video-renderer[selected] #wc-endpoint,
+ytd-playlist-panel-video-renderer[selected] #container,
+ytd-playlist-panel-video-renderer[selected] .yt-simple-endpoint,
+ytd-playlist-panel-renderer ytd-playlist-panel-video-renderer[selected],
+ytd-playlist-panel-renderer #items ytd-playlist-panel-video-renderer[selected] {
+  background: transparent !important;
+  background-color: rgb(255 255 255 / 10%) !important;
+  border-radius: 0.75em !important;
+  box-shadow: none !important;
+  outline: none !important;
+  --yt-spec-general-background-a: transparent !important;
+  --yt-spec-general-background-b: transparent !important;
+  --yt-spec-general-background-c: transparent !important;
+  --yt-spec-brand-background-primary: transparent !important;
+  --yt-spec-raised-background: transparent !important;
+  --paper-item-selected-color: transparent !important;
+}
+
+ytd-playlist-panel-video-renderer:hover:not([selected]),
+ytd-playlist-panel-video-renderer:hover:not([selected]) #content,
+ytd-playlist-panel-video-renderer:hover:not([selected]) a {
+  background: transparent !important;
+  background-color: rgb(255 255 255 / 6%) !important;
+  border-radius: 0.75em !important;
+  box-shadow: none !important;
+}
