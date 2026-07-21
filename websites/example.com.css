@@ -1,3 +1,21 @@
+/* muh glass tuning $ Central knobs — every muh-glass feature reads these; edit values here to retune the whole flavor */
+:root {
+  /* frost strength for media + frosted panels */
+  --muh-blur: 24px;
+  --muh-media-blur: 28px;
+  /* dark veil behind frosted surfaces */
+  --muh-frost-tint: rgb(0 0 0 / 35%);
+  /* clear-glass panel fill (menus, dialogs) */
+  --muh-panel-tint: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%));
+  /* hairline borders on glass surfaces */
+  --muh-border: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%));
+  /* legibility shadow behind text over wallpaper */
+  --muh-text-shadow: 0 1px 2.5px light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 65%));
+  /* accent for focus rings + selection */
+  --muh-accent: rgb(122 168 255);
+  --muh-radius: 0.85em;
+}
+
 /* transparency $ Full-page glass chrome for unthemed sites (Zen Internet force styling) */
 html,
 body,
@@ -103,7 +121,31 @@ body.light_mode,
   }
 }
 
-/* muh clear overlays $ Low-alpha dialogs/menus without frosted blur */
+/* muh readable text $ Soft shadow behind headings and body copy so text stays legible over any wallpaper */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dt,
+dd,
+figcaption,
+blockquote,
+label,
+summary,
+th,
+td,
+[class*="title"],
+[class*="Title"],
+[class*="headline"],
+[class*="Headline"] {
+  text-shadow: var(--muh-text-shadow, 0 1px 2.5px light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 65%))) !important;
+}
+
+/* muh frosted overlays $ Alternative look: frost dialogs/menus (disable "muh clear overlays" to use this) */
 [role="dialog"],
 [role="menu"],
 [role="listbox"],
@@ -114,13 +156,155 @@ body.light_mode,
 .popover,
 .Popover,
 .dropdown,
+.Dropdown {
+  backdrop-filter: blur(var(--muh-blur, 24px)) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(var(--muh-blur, 24px)) saturate(1.15) !important;
+  background-color: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  border-radius: var(--muh-radius, 0.85em) !important;
+}
+
+/* muh clear overlays $ Default look: low-alpha dialogs/menus without frosted blur (wins over frosted when both are on) */
+[role="dialog"],
+[role="menu"],
+[role="listbox"],
+[role="tooltip"],
+.modal,
+.Modal,
+.dialog,
+.Dialog,
+.popover,
+.Popover,
+.dropdown,
 .Dropdown,
 .menu-panel,
-.MenuPanel {
+.MenuPanel,
+.tooltip,
+.Tooltip {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  background-color: light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 10%)) !important;
+  background-color: var(--muh-panel-tint, light-dark(rgb(255 255 255 / 10%), rgb(0 0 0 / 12%))) !important;
   color: light-dark(rgb(20 20 20 / 92%), rgb(245 245 245 / 94%)) !important;
+  border: 1px solid var(--muh-border, light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%))) !important;
+  border-radius: var(--muh-radius, 0.85em) !important;
+}
+
+/* muh readable inputs $ Glass form fields with visible borders and a clear focus ring */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+textarea,
+select,
+[role="textbox"],
+[role="searchbox"],
+[role="combobox"] {
+  background: transparent !important;
+  background-color: light-dark(rgb(255 255 255 / 14%), rgb(0 0 0 / 20%)) !important;
+  color: light-dark(rgb(15 15 15 / 95%), rgb(248 248 248 / 96%)) !important;
+  border: 1px solid var(--muh-border, light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%))) !important;
+  border-radius: calc(var(--muh-radius, 0.85em) / 1.6) !important;
+  box-shadow: none !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+textarea:focus,
+select:focus,
+[role="textbox"]:focus,
+[role="searchbox"]:focus,
+[role="combobox"]:focus {
+  border-color: var(--muh-accent, rgb(122 168 255)) !important;
+  outline: 1px solid color-mix(in srgb, var(--muh-accent, rgb(122 168 255)) 55%, transparent) !important;
+  outline-offset: 0 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: light-dark(rgb(40 40 40 / 60%), rgb(235 235 235 / 55%)) !important;
+}
+
+/* muh readable code $ Frost code blocks so snippets stay readable over wallpaper */
+pre,
+code,
+kbd,
+samp,
+.highlight,
+.codehilite,
+[class*="codeBlock"],
+[class*="code-block"],
+[class*="CodeBlock"] {
+  background: transparent !important;
+  background-color: light-dark(rgb(255 255 255 / 45%), rgb(0 0 0 / 45%)) !important;
+  backdrop-filter: blur(calc(var(--muh-blur, 24px) / 1.5)) !important;
+  -webkit-backdrop-filter: blur(calc(var(--muh-blur, 24px) / 1.5)) !important;
+  border-radius: calc(var(--muh-radius, 0.85em) / 1.6) !important;
+  text-shadow: none !important;
+}
+
+pre code,
+pre kbd,
+pre samp {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* muh readable tables $ Subtle row striping and hairline grid so data survives transparency */
+table {
+  border-collapse: collapse !important;
+}
+
+thead,
+thead tr,
+thead th {
+  background: transparent !important;
+  background-color: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 8%)) !important;
+}
+
+tbody tr:nth-child(even) {
+  background: transparent !important;
+  background-color: light-dark(rgb(0 0 0 / 4%), rgb(255 255 255 / 4%)) !important;
+}
+
+tbody tr:hover {
+  background-color: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 9%)) !important;
+}
+
+th,
+td {
+  border-color: var(--muh-border, light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 16%))) !important;
+}
+
+/* muh solid images $ Keep pictures, avatars and canvases fully opaque — never ghosted by page transparency */
+img,
+picture,
+svg image,
+canvas,
+[style*="background-image"] {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* muh hover contrast $ Buttons and links get a visible glass fill on hover/focus */
+a:hover,
+button:hover,
+[role="button"]:hover,
+[role="tab"]:hover,
+[role="menuitem"]:hover,
+a:focus-visible,
+button:focus-visible {
+  background-color: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 10%)) !important;
+  border-radius: calc(var(--muh-radius, 0.85em) / 2) !important;
+}
+
+/* muh selection $ High-visibility text selection over glass */
+::selection {
+  background-color: color-mix(in srgb, var(--muh-accent, rgb(122 168 255)) 45%, transparent) !important;
+  color: light-dark(rgb(0 0 0), rgb(255 255 255)) !important;
+  text-shadow: none !important;
+}
+
+/* muh scrollbars $ Slim translucent scrollbars that match the glass */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: light-dark(rgb(0 0 0 / 30%), rgb(255 255 255 / 28%)) transparent !important;
 }
 
 /* no footer */
@@ -148,9 +332,9 @@ audio,
 .video-js,
 [class*="video-player"],
 [class*="VideoPlayer"] {
-  backdrop-filter: blur(28px) saturate(1.1) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(1.1) !important;
-  background-color: rgb(0 0 0 / 35%) !important;
-  background: rgb(0 0 0 / 35%) !important;
+  backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(var(--muh-media-blur, 28px)) saturate(1.1) !important;
+  background-color: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
+  background: var(--muh-frost-tint, rgb(0 0 0 / 35%)) !important;
   isolation: isolate !important;
 }

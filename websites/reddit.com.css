@@ -180,3 +180,43 @@ gallery-carousel li {
 shreddit-ad-post {
   display: none !important;
 }
+
+/* reddit-muh readable text $ Legibility shadow on post titles, body copy and comments over wallpaper */
+shreddit-post a[slot="title"],
+shreddit-post [slot="title"],
+shreddit-post [slot="text-body"],
+shreddit-comment [slot="comment"],
+shreddit-comment p,
+faceplate-tracker,
+.md,
+h1,
+h2,
+h3 {
+  text-shadow: 0 1px 2.5px light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 65%)) !important;
+}
+
+/* reddit-frosted media $ Frost the wallpaper bleed behind reddit video players only */
+shreddit-player,
+shreddit-player-2,
+shreddit-async-loader[bundlename*="player"] {
+  backdrop-filter: blur(28px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.1) !important;
+  background-color: rgb(0 0 0 / 35%) !important;
+  isolation: isolate !important;
+  border-radius: 1em !important;
+}
+
+shreddit-player video,
+shreddit-player-2 video {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* reddit-muh readable hover $ Visible glass highlight on posts and menu rows */
+shreddit-post:hover,
+faceplate-tracker[source="search_dropdown"]:hover,
+li[role="presentation"]:hover,
+faceplate-tile:hover {
+  background-color: light-dark(rgb(0 0 0 / 6%), rgb(255 255 255 / 7%)) !important;
+  border-radius: 1em !important;
+}
