@@ -271,7 +271,7 @@ ytd-merch-shelf-renderer,
   display: none !important;
 }
 
-/* yt-Transparent video background $ Hide cinematic glow; keep the video surface opaque so wallpaper does not bleed through on Zen */
+/* yt-Frosted video area $ Hide cinematic glow; frost the player section only so wallpaper bleed is blurred behind the video */
 #cinematics {
   display: none !important;
 }
@@ -280,26 +280,23 @@ ytd-merch-shelf-renderer,
   display: none !important;
 }
 
-.html5-video-container,
-#movie_player,
 #ytd-player,
+#movie_player,
 #player-container,
-#player-container-inner,
-#player-full-bleed-container,
-#full-bleed-container,
-ytlr-player,
-.html5-main-video,
-video.html5-main-video {
-  background-color: #000 !important;
-  background: #000 !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
+.html5-video-player {
+  backdrop-filter: blur(28px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.1) !important;
+  background-color: rgb(0 0 0 / 35%) !important;
+  background: rgb(0 0 0 / 35%) !important;
+  isolation: isolate !important;
 }
 
 .html5-main-video,
 video.html5-main-video,
-#movie_player video {
+#movie_player video,
+.video-stream {
   opacity: 1 !important;
+  mix-blend-mode: normal !important;
   isolation: isolate !important;
 }
 
