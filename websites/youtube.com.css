@@ -509,13 +509,14 @@ yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) {
 
   .ytSearchboxComponentInputBox,
   #i0 {
-    background-color: #fffb !important;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #000b !important;
-    }
-
-    box-shadow: black 0 0 30px !important;
+    background-color: light-dark(rgb(255 255 255 / 72%), rgb(40 40 44 / 58%)) !important;
+    border-radius: 980px !important;
+    overflow: hidden !important;
+    outline: none !important;
+    filter: none !important;
+    box-shadow:
+      0 0.5px 0 light-dark(rgb(255 255 255 / 65%), rgb(255 255 255 / 12%)) inset,
+      0 12px 32px rgb(0 0 0 / 28%) !important;
   }
 
   #i0 {
@@ -728,7 +729,7 @@ tp-yt-paper-item.ytd-compact-link-renderer {
   background-color: transparent !important;
 }
 
-/* yt-muh clear search $ Transparent search bar + Ask YouTube + suggestions */
+/* yt-muh clear search $ Mac-style glass pill search — rounded shadows only, no boxy ghosts */
 ytd-searchbox,
 #search-form.ytd-searchbox,
 #container.ytd-searchbox,
@@ -746,23 +747,49 @@ input#search,
 [class*="ytSearchboxComponent"][class*="Host"] {
   background: transparent !important;
   background-color: transparent !important;
-  border-color: rgb(255 255 255 / 18%) !important;
+  border-color: transparent !important;
   box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
 }
 
 yt-searchbox,
 #container.ytd-searchbox,
+#search-form.ytd-searchbox,
 .ytSearchboxComponentInputBox,
 .ytSearchboxComponentInputBoxDark {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  background-color: rgb(0 0 0 / 8%) !important;
+  backdrop-filter: blur(20px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.2) !important;
+  background-color: light-dark(rgb(255 255 255 / 55%), rgb(30 30 32 / 45%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 22%)) !important;
+  border-radius: 980px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 0.5px 0 light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 10%)) inset,
+    0 8px 24px rgb(0 0 0 / 18%) !important;
+  outline: none !important;
+  filter: none !important;
+}
+
+.ytSearchboxComponentInputBoxHasFocus,
+yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBox,
+yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBoxDark {
+  background-color: light-dark(rgb(255 255 255 / 72%), rgb(40 40 44 / 58%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 16%), rgb(255 255 255 / 28%)) !important;
+  box-shadow:
+    0 0.5px 0 light-dark(rgb(255 255 255 / 65%), rgb(255 255 255 / 12%)) inset,
+    0 10px 28px rgb(0 0 0 / 22%),
+    0 0 0 3px color-mix(in srgb, rgb(122 168 255) 28%, transparent) !important;
 }
 
 [class*="ytSearchboxComponent"][class*="Ask"],
 .ytSearchboxComponentSearchButton,
 .ytSearchboxComponentSearchButtonDark {
-  background-color: rgb(255 255 255 / 8%) !important;
+  background-color: light-dark(rgb(0 0 0 / 6%), rgb(255 255 255 / 10%)) !important;
+  border: none !important;
+  border-radius: 980px !important;
+  box-shadow: none !important;
+  outline: none !important;
   color: inherit !important;
 }
 
@@ -772,9 +799,15 @@ yt-searchbox,
 .sbdd_b,
 ul[role="listbox"].sbsb_b {
   background: transparent !important;
-  background-color: rgb(0 0 0 / 10%) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  background-color: light-dark(rgb(255 255 255 / 62%), rgb(28 28 30 / 55%)) !important;
+  backdrop-filter: blur(24px) saturate(1.2) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.2) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
+  border-radius: 1em !important;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 28%) !important;
+  overflow: hidden !important;
+  outline: none !important;
+  filter: none !important;
 }
 
 /* yt-muh comments gutter $ Keep comments panel from overlapping related content */
@@ -834,18 +867,54 @@ yt-formatted-string {
   text-shadow: none !important;
 }
 
-/* yt-muh readable chips $ Glass fill on filter chips and buttons so they stay visible */
+/* yt-muh readable chips $ Mac-style glass pills — kill boxy outlines/shadows that ignore border-radius */
 yt-chip-cloud-chip-renderer,
-.ytChipShapeChip {
+.ytChipShapeChip,
+yt-chip-cloud-chip-renderer button,
+yt-chip-cloud-chip-renderer iron-button,
+yt-chip-cloud-chip-renderer .yt-spec-button-shape-next,
+#chips-wrapper yt-chip-cloud-chip-renderer,
+#chips yt-chip-cloud-chip-renderer {
   background: transparent !important;
-  background-color: rgb(255 255 255 / 10%) !important;
-  border: 1px solid rgb(255 255 255 / 14%) !important;
+  background-color: light-dark(rgb(255 255 255 / 42%), rgb(255 255 255 / 10%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
+  border-radius: 980px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: hidden !important;
+  text-shadow: none !important;
+}
+
+yt-chip-cloud-chip-renderer::before,
+yt-chip-cloud-chip-renderer::after,
+.ytChipShapeChip::before,
+.ytChipShapeChip::after,
+yt-chip-cloud-chip-renderer button::before,
+yt-chip-cloud-chip-renderer button::after {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  background: transparent !important;
+  filter: none !important;
 }
 
 yt-chip-cloud-chip-renderer[selected],
-.ytChipShapeActive {
-  background-color: rgb(255 255 255 / 24%) !important;
-  border-color: rgb(255 255 255 / 32%) !important;
+yt-chip-cloud-chip-renderer[aria-selected="true"],
+.ytChipShapeActive,
+.ytChipShapeChip[aria-selected="true"] {
+  background-color: light-dark(rgb(0 0 0 / 78%), rgb(255 255 255 / 88%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 40%), rgb(255 255 255 / 55%)) !important;
+  color: light-dark(rgb(255 255 255 / 96%), rgb(0 0 0 / 90%)) !important;
+  box-shadow:
+    0 0.5px 0 light-dark(rgb(255 255 255 / 18%), rgb(255 255 255 / 70%)) inset,
+    0 4px 14px rgb(0 0 0 / 22%) !important;
+}
+
+yt-chip-cloud-chip-renderer:hover:not([selected]):not([aria-selected="true"]),
+.ytChipShapeChip:hover:not([aria-selected="true"]):not(.ytChipShapeActive) {
+  background-color: light-dark(rgb(255 255 255 / 58%), rgb(255 255 255 / 16%)) !important;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 14%) !important;
 }
 
 /* yt-muh readable hover $ Visible glass highlight on menu items, guide entries and buttons */
