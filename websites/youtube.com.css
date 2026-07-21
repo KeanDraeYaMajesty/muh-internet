@@ -781,26 +781,75 @@ yt-searchbox,
 .ytSearchboxComponentInputBoxDark {
   backdrop-filter: blur(18px) saturate(1.15) !important;
   -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
-  background-color: light-dark(rgb(255 255 255 / 40%), rgb(255 255 255 / 12%)) !important;
-  border: 0.5px solid light-dark(rgb(0 0 0 / 14%), rgb(255 255 255 / 20%)) !important;
+  background-color: light-dark(rgb(255 255 255 / 55%), rgb(0 0 0 / 42%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 14%), rgb(255 255 255 / 22%)) !important;
   border-radius: 980px !important;
   overflow: hidden !important;
+  color: light-dark(rgb(0 0 0 / 92%), rgb(255 255 255 / 96%)) !important;
 }
 
 .ytSearchboxComponentInputBoxHasFocus,
 yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBox,
 yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) .ytSearchboxComponentInputBoxDark {
-  background-color: light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 16%)) !important;
-  border-color: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 28%)) !important;
+  background-color: light-dark(rgb(255 255 255 / 70%), rgb(0 0 0 / 52%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 30%)) !important;
+}
+
+input#search,
+#search-input,
+.ytSearchboxComponentInput,
+.ytSearchboxComponentInput input,
+yt-searchbox input {
+  color: light-dark(rgb(0 0 0 / 92%), rgb(255 255 255 / 96%)) !important;
+  caret-color: light-dark(rgb(0 0 0 / 92%), rgb(255 255 255 / 96%)) !important;
+  opacity: 1 !important;
+}
+
+input#search::placeholder,
+#search-input::placeholder,
+.ytSearchboxComponentInput::placeholder,
+yt-searchbox input::placeholder {
+  color: light-dark(rgb(0 0 0 / 55%), rgb(255 255 255 / 72%)) !important;
+  opacity: 1 !important;
+}
+
+/* Search / header icons — solid, not washed grey */
+yt-searchbox yt-icon,
+yt-searchbox .yt-icon,
+.ytSearchboxComponentInputBox yt-icon,
+.ytSearchboxComponentSearchButton yt-icon,
+[class*="ytSearchboxComponent"] yt-icon,
+#masthead yt-icon,
+ytd-topbar-menu-button-renderer yt-icon,
+ytd-notification-topbar-button-renderer yt-icon,
+#buttons.ytd-masthead yt-icon {
+  color: light-dark(rgb(0 0 0 / 88%), rgb(255 255 255 / 94%)) !important;
+  fill: light-dark(rgb(0 0 0 / 88%), rgb(255 255 255 / 94%)) !important;
+  opacity: 1 !important;
+}
+
+yt-searchbox yt-icon svg,
+yt-searchbox .yt-icon svg,
+.ytSearchboxComponentInputBox yt-icon svg,
+.ytSearchboxComponentSearchButton yt-icon svg,
+[class*="ytSearchboxComponent"] yt-icon svg,
+#masthead yt-icon svg,
+#buttons.ytd-masthead yt-icon svg,
+yt-searchbox path,
+#masthead path {
+  fill: currentColor !important;
+  opacity: 1 !important;
+  color: inherit !important;
 }
 
 [class*="ytSearchboxComponent"][class*="Ask"],
 .ytSearchboxComponentSearchButton,
 .ytSearchboxComponentSearchButtonDark {
-  background-color: light-dark(rgb(255 255 255 / 28%), rgb(255 255 255 / 10%)) !important;
-  border: 0.5px solid light-dark(rgb(0 0 0 / 10%), rgb(255 255 255 / 16%)) !important;
+  background-color: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 14%)) !important;
+  border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
   border-radius: 980px !important;
-  color: inherit !important;
+  color: light-dark(rgb(0 0 0 / 88%), rgb(255 255 255 / 94%)) !important;
+  opacity: 1 !important;
 }
 
 .ytSearchboxComponentSuggestionsContainer,
@@ -915,29 +964,26 @@ yt-chip-cloud-chip-renderer .yt-spec-button-shape-next,
   border: 0.5px solid light-dark(rgb(0 0 0 / 12%), rgb(255 255 255 / 18%)) !important;
   border-radius: 980px !important;
   overflow: hidden !important;
+  color: light-dark(rgb(0 0 0 / 90%), rgb(255 255 255 / 96%)) !important;
+  opacity: 1 !important;
 }
 
-yt-chip-cloud-chip-renderer::before,
-yt-chip-cloud-chip-renderer::after,
-.ytChipShapeChip::before,
-.ytChipShapeChip::after,
-yt-chip-cloud-chip-renderer button::before,
-yt-chip-cloud-chip-renderer button::after {
-  box-shadow: none !important;
-  outline: none !important;
-  border: none !important;
-  background: transparent !important;
-  filter: none !important;
-  content: none !important;
+yt-chip-cloud-chip-renderer yt-formatted-string,
+yt-chip-cloud-chip-renderer .yt-core-attributed-string,
+.ytChipShapeChip,
+.ytChipShapeChip * {
+  color: inherit !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
 }
 
 yt-chip-cloud-chip-renderer[selected],
 yt-chip-cloud-chip-renderer[aria-selected="true"],
 .ytChipShapeActive,
 .ytChipShapeChip[aria-selected="true"] {
-  background-color: light-dark(rgb(255 255 255 / 55%), rgb(255 255 255 / 22%)) !important;
-  border-color: light-dark(rgb(0 0 0 / 18%), rgb(255 255 255 / 32%)) !important;
-  color: light-dark(rgb(0 0 0 / 88%), rgb(255 255 255 / 96%)) !important;
+  background-color: light-dark(rgb(255 255 255 / 70%), rgb(255 255 255 / 28%)) !important;
+  border-color: light-dark(rgb(0 0 0 / 20%), rgb(255 255 255 / 36%)) !important;
+  color: light-dark(rgb(0 0 0 / 92%), rgb(255 255 255 / 98%)) !important;
   box-shadow: none !important;
 }
 
@@ -1007,4 +1053,52 @@ ytd-playlist-panel-video-renderer:hover:not([selected]) a {
   background-color: rgb(255 255 255 / 5%) !important;
   border-radius: 0.75em !important;
   box-shadow: none !important;
+}
+
+/* Queue + action titles — solid white, never washed grey */
+ytd-playlist-panel-video-renderer #video-title,
+ytd-playlist-panel-video-renderer .yt-core-attributed-string,
+ytd-playlist-panel-video-renderer yt-formatted-string,
+ytd-playlist-panel-renderer .title,
+ytd-playlist-panel-renderer #publisher-container,
+ytd-menu-renderer yt-formatted-string,
+ytd-button-renderer yt-formatted-string,
+yt-button-shape .yt-spec-button-shape-next__button-text-content,
+.yt-spec-button-shape-next,
+ytd-segmented-like-dislike-button-view-model,
+ytd-watch-metadata #owner-name a,
+ytd-watch-metadata ytd-channel-name,
+ytd-video-owner-renderer ytd-channel-name {
+  color: rgb(255 255 255 / 96%) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+ytd-playlist-panel-video-renderer #byline,
+ytd-playlist-panel-video-renderer .byline-wrapper,
+ytd-playlist-panel-video-renderer #channel-name,
+ytd-playlist-panel-renderer #index,
+ytd-playlist-panel-renderer .index-message {
+  color: rgb(255 255 255 / 72%) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+ytd-menu-renderer yt-icon,
+ytd-button-renderer yt-icon,
+yt-button-shape yt-icon,
+.yt-spec-button-shape-next yt-icon,
+ytd-segmented-like-dislike-button-view-model yt-icon {
+  color: rgb(255 255 255 / 94%) !important;
+  fill: rgb(255 255 255 / 94%) !important;
+  opacity: 1 !important;
+}
+
+ytd-menu-renderer yt-icon svg,
+ytd-button-renderer yt-icon svg,
+yt-button-shape yt-icon svg,
+.yt-spec-button-shape-next yt-icon svg path,
+ytd-segmented-like-dislike-button-view-model path {
+  fill: currentColor !important;
+  opacity: 1 !important;
 }
