@@ -768,6 +768,8 @@ html,
 html[dark],
 ytd-app,
 :root {
+  --muh-yt-bubble: rgb(0 0 0 / 42%);
+  --muh-yt-bubble-border: rgb(255 255 255 / 24%);
   --yt-spec-icon-inactive: #ffffff !important;
   --yt-spec-icon-disabled: rgb(255 255 255 / 55%) !important;
   --yt-spec-icon-active-other: #ffffff !important;
@@ -782,7 +784,15 @@ ytd-app,
   --yt-spec-general-background-a: transparent !important;
   --yt-spec-general-background-b: transparent !important;
   --yt-spec-general-background-c: transparent !important;
-  --yt-spec-badge-chip-background: rgb(255 255 255 / 14%) !important;
+  --yt-spec-badge-chip-background: var(--muh-yt-bubble) !important;
+  --yt-spec-button-chip-background-hover: rgb(0 0 0 / 55%) !important;
+  --yt-spec-additive-background: rgb(255 255 255 / 12%) !important;
+  --yt-spec-10-percent-layer: rgb(255 255 255 / 12%) !important;
+  --yt-spec-15-percent-layer: rgb(255 255 255 / 16%) !important;
+  --yt-spec-mono-tonal-hover: rgb(255 255 255 / 16%) !important;
+  --yt-spec-static-overlay-button-secondary: var(--muh-yt-bubble) !important;
+  --yt-spec-static-overlay-text-primary: #ffffff !important;
+  --yt-spec-static-overlay-text-secondary: rgb(255 255 255 / 78%) !important;
 }
 
 ytd-app *:not(.ytp-caption-segment):not(.caption-window):not(.ytp-caption-window-container) {
@@ -796,23 +806,46 @@ ytd-app *:not(.ytp-caption-segment):not(.caption-window):not(.ytp-caption-window
 }
 
 ytd-topbar-logo-renderer,
+a#logo,
+#logo.ytd-masthead {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  background-color: var(--muh-yt-bubble) !important;
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  border: 0.5px solid var(--muh-yt-bubble-border) !important;
+  border-radius: 980px !important;
+  padding: 4px 12px 4px 8px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+}
+
 ytd-topbar-logo-renderer *,
 #logo,
 #logo-icon,
 #logo-icon-container,
-#country-code {
+#country-code,
+#logo-text,
+yt-animated-icon,
+.ytd-topbar-logo-renderer {
   opacity: 1 !important;
   filter: none !important;
   color: #ffffff !important;
   fill: #ffffff !important;
   box-shadow: none !important;
+  background: transparent !important;
 }
 
 ytd-topbar-logo-renderer path,
 #logo-icon path,
-#logo-icon-container path {
+#logo-icon-container path,
+#logo-text,
+.ytd-logo-wordmark {
   fill: #ffffff !important;
   fill-opacity: 1 !important;
+  color: #ffffff !important;
   opacity: 1 !important;
 }
 
@@ -831,8 +864,8 @@ yt-searchbox {
 .ytSearchboxComponentInputBoxDark {
   backdrop-filter: blur(18px) saturate(1.15) !important;
   -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
-  background-color: rgb(0 0 0 / 40%) !important;
-  border: 0.5px solid rgb(255 255 255 / 24%) !important;
+  background-color: var(--muh-yt-bubble) !important;
+  border: 0.5px solid var(--muh-yt-bubble-border) !important;
   border-radius: 980px !important;
   box-shadow: none !important;
   outline: none !important;
@@ -914,8 +947,8 @@ ul[role="listbox"].sbsb_b {
 #chips yt-chip-cloud-chip-renderer,
 yt-chip-cloud-chip-renderer,
 .ytChipShapeChip {
-  background-color: rgb(255 255 255 / 14%) !important;
-  border: 0.5px solid rgb(255 255 255 / 20%) !important;
+  background-color: var(--muh-yt-bubble) !important;
+  border: 0.5px solid var(--muh-yt-bubble-border) !important;
   border-radius: 980px !important;
   box-shadow: none !important;
   outline: none !important;
@@ -946,7 +979,7 @@ yt-chip-cloud-chip-renderer *,
 yt-chip-cloud-chip-renderer[selected],
 yt-chip-cloud-chip-renderer[aria-selected="true"],
 .ytChipShapeActive {
-  background-color: rgb(255 255 255 / 28%) !important;
+  background-color: rgb(0 0 0 / 58%) !important;
   border-color: rgb(255 255 255 / 36%) !important;
   color: #ffffff !important;
   box-shadow: none !important;
@@ -989,17 +1022,54 @@ ytd-playlist-panel-renderer .index-message {
   opacity: 1 !important;
 }
 
+#actions,
+#actions-inner,
+#top-level-buttons-computed,
+#flexible-item-buttons,
+#menu-container,
+#owner,
+ytd-watch-metadata #actions,
+ytd-watch-metadata #actions-inner {
+  --yt-spec-badge-chip-background: var(--muh-yt-bubble) !important;
+  --yt-spec-button-chip-background-hover: rgb(0 0 0 / 55%) !important;
+  --yt-spec-10-percent-layer: rgb(255 255 255 / 12%) !important;
+  --yt-spec-15-percent-layer: rgb(255 255 255 / 16%) !important;
+  --yt-spec-additive-background: rgb(255 255 255 / 12%) !important;
+  --yt-spec-text-primary: #ffffff !important;
+  --yt-spec-text-secondary: rgb(255 255 255 / 78%) !important;
+  --yt-spec-icon-inactive: #ffffff !important;
+  --yt-spec-icon-disabled: rgb(255 255 255 / 55%) !important;
+  --yt-spec-icon-active-other: #ffffff !important;
+  color: #ffffff !important;
+}
+
 #actions ytd-button-renderer,
 #actions yt-button-shape,
 #actions .yt-spec-button-shape-next,
+#actions button-view-model,
+#actions yt-button-view-model,
+#actions like-button-view-model,
+#actions dislike-button-view-model,
+#actions toggle-button-view-model,
+#actions segmented-like-dislike-button-view-model,
 #actions ytd-segmented-like-dislike-button-view-model,
+#actions ytd-download-button-renderer,
+#top-level-buttons-computed > *,
+#flexible-item-buttons > *,
 ytd-watch-metadata #actions-inner ytd-button-renderer,
 ytd-watch-metadata #actions-inner yt-button-shape,
 ytd-watch-metadata #actions-inner .yt-spec-button-shape-next,
+ytd-watch-metadata #actions-inner button-view-model,
+ytd-watch-metadata #actions-inner yt-button-view-model,
 #owner ytd-button-renderer,
-#owner yt-button-shape {
-  background-color: rgb(255 255 255 / 14%) !important;
-  border: 0.5px solid rgb(255 255 255 / 20%) !important;
+#owner yt-button-shape,
+#owner .yt-spec-button-shape-next,
+#owner button-view-model {
+  background: var(--muh-yt-bubble) !important;
+  background-color: var(--muh-yt-bubble) !important;
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  border: 0.5px solid var(--muh-yt-bubble-border) !important;
   border-radius: 980px !important;
   box-shadow: none !important;
   outline: none !important;
@@ -1008,22 +1078,51 @@ ytd-watch-metadata #actions-inner .yt-spec-button-shape-next,
   opacity: 1 !important;
 }
 
-#actions *,
-ytd-watch-metadata #actions-inner *,
-#owner ytd-button-renderer *,
-#owner yt-button-shape * {
+#actions .yt-spec-button-shape-next--tonal,
+#actions .yt-spec-button-shape-next--outline,
+#actions .yt-spec-button-shape-next--text,
+#actions button.yt-spec-button-shape-next,
+#owner .yt-spec-button-shape-next--tonal,
+#owner .yt-spec-button-shape-next--outline,
+#owner button.yt-spec-button-shape-next,
+ytd-watch-metadata #actions-inner button.yt-spec-button-shape-next {
+  background: var(--muh-yt-bubble) !important;
+  background-color: var(--muh-yt-bubble) !important;
+  border: 0.5px solid var(--muh-yt-bubble-border) !important;
+  border-radius: 980px !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+#actions yt-icon,
+#actions .yt-spec-button-shape-next__icon,
+#actions .ytIconWrapperHost,
+#actions .yt-core-attributed-string,
+#actions span,
+#actions yt-formatted-string,
+#actions .yt-spec-button-shape-next__button-text-content,
+ytd-watch-metadata #actions-inner yt-icon,
+ytd-watch-metadata #actions-inner .yt-spec-button-shape-next__icon,
+ytd-watch-metadata #actions-inner .yt-core-attributed-string,
+ytd-watch-metadata #actions-inner span,
+#owner yt-icon,
+#owner .yt-spec-button-shape-next__icon,
+#owner yt-formatted-string,
+#owner .yt-spec-button-shape-next__button-text-content {
   color: #ffffff !important;
   fill: #ffffff !important;
   opacity: 1 !important;
   text-shadow: none !important;
-  box-shadow: none !important;
   filter: none !important;
+  background: transparent !important;
 }
 
 #actions path,
+#actions .ytSvgIconHost path,
 ytd-watch-metadata #actions-inner path,
 #owner path {
   fill: #ffffff !important;
+  stroke: #ffffff !important;
   opacity: 1 !important;
 }
 
