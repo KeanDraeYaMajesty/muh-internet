@@ -1102,3 +1102,124 @@ ytd-segmented-like-dislike-button-view-model path {
   fill: currentColor !important;
   opacity: 1 !important;
 }
+
+/* yt-muh flat chrome $ Final pass: crisp logo/chips/search — kill double borders + word halos */
+ytd-topbar-logo-renderer,
+ytd-topbar-logo-renderer *,
+#logo,
+#logo-icon,
+#logo-icon-container,
+#country-code,
+ytd-topbar-logo-renderer yt-icon,
+ytd-topbar-logo-renderer svg,
+ytd-topbar-logo-renderer path {
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+ytd-topbar-logo-renderer path,
+#logo-icon path,
+#logo-icon-container path {
+  fill: #ffffff !important;
+  fill-opacity: 1 !important;
+  opacity: 1 !important;
+}
+
+/* Search: one shell, one border — nested pieces stay borderless */
+ytd-searchbox,
+#search-form.ytd-searchbox,
+yt-searchbox {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+}
+
+#container.ytd-searchbox,
+.ytSearchboxComponentInputBox,
+.ytSearchboxComponentInputBoxDark {
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  background-color: rgb(0 0 0 / 38%) !important;
+  border: 0.5px solid rgb(255 255 255 / 24%) !important;
+  border-radius: 980px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+}
+
+.ytSearchboxComponentInputBox *,
+.ytSearchboxComponentInputBoxDark *,
+#container.ytd-searchbox > *,
+yt-searchbox > * {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+input#search,
+#search-input,
+yt-searchbox input,
+.ytSearchboxComponentInput {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+input#search::placeholder,
+#search-input::placeholder,
+yt-searchbox input::placeholder {
+  color: rgb(255 255 255 / 78%) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Chips: flat glass, crisp white labels, zero halo */
+#chips-wrapper yt-chip-cloud-chip-renderer,
+#chips yt-chip-cloud-chip-renderer,
+yt-chip-cloud-chip-renderer,
+.ytChipShapeChip,
+yt-chip-cloud-chip-renderer button,
+yt-chip-cloud-chip-renderer .yt-spec-button-shape-next {
+  background-color: rgb(255 255 255 / 12%) !important;
+  border: 0.5px solid rgb(255 255 255 / 18%) !important;
+  border-radius: 980px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+#chips-wrapper yt-chip-cloud-chip-renderer *,
+#chips yt-chip-cloud-chip-renderer *,
+yt-chip-cloud-chip-renderer *,
+.ytChipShapeChip * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-text-stroke: 0 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  paint-order: normal !important;
+}
+
+yt-chip-cloud-chip-renderer[selected],
+yt-chip-cloud-chip-renderer[aria-selected="true"],
+.ytChipShapeActive {
+  background-color: rgb(255 255 255 / 26%) !important;
+  border-color: rgb(255 255 255 / 34%) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
