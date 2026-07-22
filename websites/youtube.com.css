@@ -905,23 +905,23 @@ ytd-watch-flexy[flexy] #below {
   max-width: 100% !important;
 }
 
-/* yt-muh readable text $ Legibility shadow on titles, metadata and comments over wallpaper */
-#video-title,
-.ytd-video-meta-block,
-#channel-name,
-ytd-channel-name,
-#metadata-line,
-#description,
-#description-inline-expander,
-ytd-watch-metadata #title,
+/* yt-muh readable text $ Legibility shadow on main titles/comments only — never chips, queue, or action pills */
+ytd-watch-metadata #title h1,
+ytd-watch-metadata #title yt-formatted-string,
 ytd-comment-view-model #content-text,
-#author-text,
-.ytd-guide-entry-renderer {
+#author-text.ytd-comment-view-model,
+#description-inline-expander,
+ytd-guide-entry-renderer yt-formatted-string {
   text-shadow: 0 1px 2.5px rgb(0 0 0 / 65%) !important;
 }
 
 .html5-video-player yt-formatted-string,
 .ytp-chrome-bottom yt-formatted-string,
+#video-title,
+.ytd-video-meta-block,
+#channel-name,
+ytd-channel-name,
+#metadata-line,
 yt-chip-cloud-chip-renderer,
 yt-chip-cloud-chip-renderer *,
 .ytChipShapeChip,
@@ -931,8 +931,34 @@ ytd-playlist-panel-renderer *,
 ytd-playlist-panel-video-renderer,
 ytd-playlist-panel-video-renderer *,
 #playlist,
-#playlist * {
+#playlist *,
+ytd-menu-renderer,
+ytd-menu-renderer *,
+ytd-button-renderer,
+ytd-button-renderer *,
+yt-button-shape,
+yt-button-shape *,
+.yt-spec-button-shape-next,
+.yt-spec-button-shape-next *,
+ytd-segmented-like-dislike-button-view-model,
+ytd-segmented-like-dislike-button-view-model *,
+ytd-subscribe-button-renderer,
+ytd-subscribe-button-renderer *,
+#actions,
+#actions *,
+#top-row,
+#top-row *,
+#owner,
+#owner *,
+ytd-watch-metadata #actions-inner,
+ytd-watch-metadata #actions-inner *,
+ytd-topbar-logo-renderer,
+ytd-topbar-logo-renderer *,
+#logo,
+#logo * {
   text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  filter: none !important;
 }
 
 /* yt-muh readable chips $ Flat glass pills — no text/box/filter shadows */
@@ -1222,4 +1248,49 @@ yt-chip-cloud-chip-renderer[aria-selected="true"],
   border-color: rgb(255 255 255 / 34%) !important;
   color: #ffffff !important;
   box-shadow: none !important;
+}
+
+
+/* yt-muh action pills $ Flat glass like/share/join pills — crisp white, zero word halo */
+#actions ytd-button-renderer,
+#actions yt-button-shape,
+#actions .yt-spec-button-shape-next,
+#actions ytd-segmented-like-dislike-button-view-model,
+#top-row ytd-button-renderer,
+#owner ytd-button-renderer,
+#owner yt-button-shape,
+ytd-watch-metadata #actions-inner ytd-button-renderer,
+ytd-watch-metadata #actions-inner yt-button-shape,
+ytd-watch-metadata #actions-inner .yt-spec-button-shape-next {
+  background-color: rgb(255 255 255 / 12%) !important;
+  border: 0.5px solid rgb(255 255 255 / 18%) !important;
+  border-radius: 980px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+#actions *,
+#top-row #actions *,
+ytd-watch-metadata #actions-inner *,
+#owner ytd-button-renderer *,
+#owner yt-button-shape * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-text-stroke: 0 !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  opacity: 1 !important;
+}
+
+#actions path,
+#top-row path,
+ytd-watch-metadata #actions-inner path,
+#owner path {
+  fill: #ffffff !important;
+  opacity: 1 !important;
 }
